@@ -1,0 +1,29 @@
+SINTETIZADOR DE VOZ MODIFICADO PARA SIMULAÇÃO DE PATOLOGIAS DA VOZ
+
+    O trabalho contido aqui mostra a implementação de um sintetizador de voz baseado no sintetizador de Klatt (1980), porém com níveis e tipos de ruído controlados para simulação de patologias da voz.
+    A implementação do módulo sintetizador e da api web foram feitas em Python, versão 3.7.
+    Realizado como trabalo de conclusão de curso da graduação em engenharia elétrica da UFMG.
+
+DIRETÓRIOS
+
+    src
+        Pacote python contendo códigos fonte gerais do sintetizador.
+
+        synth
+            Implementação do sintetizador, utiliza fortemente as bibliotecas scipy stack 1.8.
+
+        api
+            Implementação da API com o framework Python Django, para acesso das implementações do pacote synth via web.
+
+        trash
+            Arquivos antigos que ainda podem ser utilizados como referência, mas que não fazem parte do código fonte mais
+
+        web
+            Diretório com as páginas web desenvolvidas para exibir a api.
+
+    docs
+        Documentos utilizados para o desenvolvimento deste trabalho.
+
+Lucas Moura Veloso
+Graduando em Engenharia Elétrica pela UFMG
+Belo Horizonte, 07/03/2017
