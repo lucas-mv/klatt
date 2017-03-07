@@ -4,7 +4,8 @@ Constantes de uso geral no módulo sintetizador. Os ganhos descritos estão em d
 
 class Amostragem:
     AMOSTRAS_FRAME = 50
-    TAXA_AMOSTRAGEM = 10000
+    TAXA_AMOSTRAGEM = 10000  #Hz
+    TEMPO_AMOSTRAGEM = 0.0001  #s
 
 class ParametrosConstantes:
     AN = 0
