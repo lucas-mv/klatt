@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="082d6881-fd23-484f-bde8-3384412145e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/filtros_ressonantes.py" afterPath="$PROJECT_DIR$/src/synth/filtros_ressonantes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/main.py" afterPath="$PROJECT_DIR$/src/synth/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/parametros.py" afterPath="$PROJECT_DIR$/src/synth/parametros.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/utils.py" afterPath="$PROJECT_DIR$/src/synth/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -469,6 +464,14 @@
       <option name="presentableId" value="Default" />
       <updated>1488639656315</updated>
     </task>
+    <task id="LOCAL-00001" summary="melhoria da classe util, desenvolvimento dos filtros anti ressonantes, inicio do desenvolvimento dos filtros nasais (rnp rgz) e criacao do modulo para as fontes de ruido e som">
+      <created>1488938884453</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1488938884453</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -496,6 +499,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="melhoria da classe util, desenvolvimento dos filtros anti ressonantes, inicio do desenvolvimento dos filtros nasais (rnp rgz) e criacao do modulo para as fontes de ruido e som" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhoria da classe util, desenvolvimento dos filtros anti ressonantes, inicio do desenvolvimento dos filtros nasais (rnp rgz) e criacao do modulo para as fontes de ruido e som" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
