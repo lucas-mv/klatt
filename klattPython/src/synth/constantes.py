@@ -6,10 +6,10 @@ class Amostragem:
     AMOSTRAS_FRAME = 50
     TAXA_AMOSTRAGEM = 10000  #Hz
     TEMPO_AMOSTRAGEM = 0.0001  #s
-    TEMPO_SIMULACAO = 2  #s
 
 class Gerais:
     NUMERO_FONTES_RUIDO_ROSA = 1
+    TEMPO_SIMULACAO = 2  # s
 
 class ParametrosConstantes:
     AN = 0
@@ -26,6 +26,7 @@ class ParametrosConstantes:
     BNP = 100
     BNZ = 100
     BGS = 200
+    F0 = 80
 
 class VogalA:
     F1 = 620

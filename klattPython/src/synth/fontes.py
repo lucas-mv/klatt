@@ -7,19 +7,6 @@ import random as rnd
 import numpy as np
 import pandas as pd
 
-class Frame:
-    _valores = []
-
-    def __init__(self, tipo):
-        if(tipo == 'imp'):
-            self._valores = gerar_trem_impulsos()
-        elif(tipo == 'rnd'):
-            self._valores = gerar_ruido_branco()
-        elif(tipo == 'pnk'):
-            self._valores = gerar_ruido_rosa()
-        else:
-            self._valores = []
-
 def gerar_trem_impulsos():
     trem_impulsos = []
     for i in range(ctes.Amostragem.AMOSTRAS_FRAME):
@@ -51,11 +38,3 @@ def gerar_ruido_rosa():
     df.fillna(method='ffill', axis=0, inplace=True)
     ruido_rosa = df.sum(axis=1).values
     return ruido_rosa
-
-def somar_frames(frame_1, frame_2):
-    resultado = []
-    for i in range(ctes.Amostragem.AMOSTRAS_FRAME):
-        resultado.append(frame_1._valores[i] + frame_2._valores[i])
-    frame = Frame('')
-    frame._valores = resultado
-    return frame
