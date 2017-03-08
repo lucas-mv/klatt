@@ -8,12 +8,12 @@ def bode_numerador_denominador(num, den):
 
 def plotar_bode(funcao_transferencia):
     w, mag, phase = funcao_transferencia.bode()
-    plt.figure()
-    plt.semilogx(w, mag)
-    plt.title('Bode magnitude plot')
-
-    plt.figure()
-    plt.semilogx(w, phase)
-    plt.title('Bode phase plot')
-
+    f, axarr = plt.subplots(2, sharex=True)
+    axarr[0].semilogx(w, mag)
+    axarr[0].set_title('BODE - MAGNITUDE')
+    axarr[0].set_ylabel('dB')
+    axarr[1].semilogx(w, phase)
+    axarr[1].set_title('BODE - FASE')
+    axarr[1].set_xlabel('Hz')
+    axarr[1].set_ylabel('Graus')
     plt.show()

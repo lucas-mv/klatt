@@ -5,7 +5,7 @@ Os ganhos descritos estão em dB e as frequencias em Hz.
 
 import src.synth.constantes as ctes
 
-class ParametrosSintetizador:
+class ParametrosCascata:
 
     # <editor-fold desc="Propriedades">
 
@@ -49,6 +49,7 @@ class ParametrosSintetizador:
     @property
     def fnz(self):
         return self._fnz
+
     @property
     def f0(self):
         return self._f0
