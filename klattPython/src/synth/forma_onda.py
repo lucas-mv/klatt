@@ -10,7 +10,6 @@ class Som:
     _wav = None
 
     def __init__(self, arquivo):
-        self._finalizado = True
         self._arquivo = arquivo
         self._wav = []
 

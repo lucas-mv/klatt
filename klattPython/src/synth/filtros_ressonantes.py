@@ -8,21 +8,21 @@ import math
 import numpy as np
 from scipy import signal
 
-def calcular_abc(bw, f):
+def calcularabc(bw, f):
     t = ctes.Amostragem.TEMPO_AMOSTRAGEM
     c = -1 * math.exp(-2 * np.pi * bw * t)
     b = 2 * math.exp(-1 * np.pi * bw * t) * math.cos(2 * np.pi * t * f)
     a = 1 - b - c
     return a, b, c
 
-def montar_num_den(bw, f):
-    a, b, c = calcular_abc(bw, f)
+def montar_numden(bw, f):
+    a, b, c = calcularabc(bw, f)
     num = [a, 0, 0]
     den = [1, -1*b, -1*c]
     return num, den
 
-def montar_num_den_antiressonante(bw, f):
-    a, b, c = calcular_abc(bw, f)
+def montar_numden_antiressonante(bw, f):
+    a, b, c = calcularabc(bw, f)
     a_anti = 1/a
     b_anti= -1*b/a
     c_anti = -1*c*a
@@ -30,13 +30,13 @@ def montar_num_den_antiressonante(bw, f):
     den = [1, 0, 0]
     return num, den
 
-def montar_filtros(vogal, f0, av):
+def montarfiltros(vogal, f0, av):
     parametros = params.ParametrosCascata(vogal, f0, av)
-    num_1, den_1 = montar_num_den(parametros.b1, parametros.f1)
-    num_2, den_2 = montar_num_den(parametros.b2, parametros.f2)
-    num_3, den_3 = montar_num_den(parametros.b3, parametros.f3)
-    num_4, den_4 = montar_num_den(parametros.b4, parametros.f4)
-    num_5, den_5 = montar_num_den(parametros.b5, parametros.f5)
+    num_1, den_1 = montar_numden(parametros.b1, parametros.f1)
+    num_2, den_2 = montar_numden(parametros.b2, parametros.f2)
+    num_3, den_3 = montar_numden(parametros.b3, parametros.f3)
+    num_4, den_4 = montar_numden(parametros.b4, parametros.f4)
+    num_5, den_5 = montar_numden(parametros.b5, parametros.f5)
 
     num = np.convolve(num_1, num_2)
     den = np.convolve(den_1, den_2)
