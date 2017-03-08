@@ -7,6 +7,8 @@ class Amostragem:
     TAXA_AMOSTRAGEM = 10000  #Hz
     TEMPO_AMOSTRAGEM = 0.0001  #s
     TEMPO_SIMULACAO = 2  #s
+
+class Gerais:
     NUMERO_FONTES_RUIDO_ROSA = 1
 
 class ParametrosConstantes:

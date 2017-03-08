@@ -8,17 +8,17 @@ import numpy as np
 import pandas as pd
 
 class Frame:
-    valores = []
+    _valores = []
 
     def __init__(self, tipo):
         if(tipo == 'imp'):
-            self.valores = gerar_trem_impulsos()
+            self._valores = gerar_trem_impulsos()
         elif(tipo == 'rnd'):
-            self.valores = gerar_ruido_branco()
+            self._valores = gerar_ruido_branco()
         elif(tipo == 'pnk'):
-            self.valores = gerar_ruido_rosa()
+            self._valores = gerar_ruido_rosa()
         else:
-            self.valores = []
+            self._valores = []
 
 def gerar_trem_impulsos():
     trem_impulsos = []
@@ -36,14 +36,14 @@ def gerar_ruido_rosa():
     """
     Implementado de acordo com a descricao em https://www.dsprelated.com/showarticle/908.php
     """
-    array = np.empty((ctes.Amostragem.AMOSTRAS_FRAME, ctes.Amostragem.NUMERO_FONTES_RUIDO_ROSA))
+    array = np.empty((ctes.Amostragem.AMOSTRAS_FRAME, ctes.Gerais.NUMERO_FONTES_RUIDO_ROSA))
     array.fill(np.nan)
-    array[0, :] = np.random.random(ctes.Amostragem.NUMERO_FONTES_RUIDO_ROSA)
+    array[0, :] = np.random.random(ctes.Gerais.NUMERO_FONTES_RUIDO_ROSA)
     array[:, 0] = np.random.random(ctes.Amostragem.AMOSTRAS_FRAME)
 
-    n = ctes.Amostragem.NUMERO_FONTES_RUIDO_ROSA
+    n = ctes.Gerais.NUMERO_FONTES_RUIDO_ROSA
     cols = np.random.geometric(0.5, n)
-    cols[cols >= ctes.Amostragem.NUMERO_FONTES_RUIDO_ROSA] = 0
+    cols[cols >= ctes.Gerais.NUMERO_FONTES_RUIDO_ROSA] = 0
     rows = np.random.randint(ctes.Amostragem.AMOSTRAS_FRAME, size=n)
     array[rows, cols] = np.random.random(n)
 
@@ -55,7 +55,7 @@ def gerar_ruido_rosa():
 def somar_frames(frame_1, frame_2):
     resultado = []
     for i in range(ctes.Amostragem.AMOSTRAS_FRAME):
-        resultado.append(frame_1[i] + frame_2[i])
+        resultado.append(frame_1._valores[i] + frame_2._valores[i])
     frame = Frame('')
-    frame.valores = resultado
+    frame._valores = resultado
     return frame
