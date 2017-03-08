@@ -45,6 +45,20 @@ class Filtro:
 
     def montarfiltros(self, vogal, f0, av):
         parametros = params.ParametrosCascata(vogal, f0, av)
+
+        num_rgp, den_rgp = self.montar_numden(ctes.ParametrosConstantes.BGP, ctes.ParametrosConstantes.FGP)
+        num_rgs, den_rgs = self.montar_numden(ctes.ParametrosConstantes.BGS, ctes.ParametrosConstantes.FGZ)
+        num_rgz, den_rgz = self.montar_numden(ctes.ParametrosConstantes.BGZ, ctes.ParametrosConstantes.FGZ)
+        num_fonte = np.convolve(num_rgp, num_rgs)
+        num_fonte = np.convolve(num_fonte, num_rgz)
+        den_fonte = np.convolve(den_rgp, den_rgs)
+        den_fonte = np.convolve(den_fonte, den_rgz)
+
+        num_rnp, den_rnp = self.montar_numden(ctes.ParametrosConstantes.BNP, ctes.ParametrosConstantes.FNP)
+        num_rnz, den_rnz = self.montar_numden(ctes.ParametrosConstantes.BNZ, parametros.fnz)
+        num_nasal = np.convolve(num_rnp, num_rnz)
+        den_nasal = np.convolve(den_rnp, den_rnz)
+
         num_1, den_1 = self.montar_numden(parametros.b1, parametros.f1)
         num_2, den_2 = self.montar_numden(parametros.b2, parametros.f2)
         num_3, den_3 = self.montar_numden(parametros.b3, parametros.f3)
@@ -59,13 +73,10 @@ class Filtro:
         den = np.convolve(den, den_4)
         num = np.convolve(num, num_5)
         den = np.convolve(den, den_5)
-
-        # num_rnp, den_rnp = montar_num_den(ctes.ParametrosConstantes.BNP, ctes.ParametrosConstantes.FNP)
-        # num_rnz, den_rnz = montar_num_den(ctes.ParametrosConstantes.BNZ, parametros.fnz)
-        # num_nasal = np.convolve(num_rnp, num_rnz)
-        # den_nasal = np.convolve(den_rnp, den_rnz)
-        # num = np.convolve(num_nasal, num)
-        # den = np.convolve(den_nasal, den)
+        num = np.convolve(num_nasal, num)
+        den = np.convolve(den_nasal, den)
+        num = np.convolve(num_fonte, num)
+        den = np.convolve(den_fonte, den)
 
         return num, den
 

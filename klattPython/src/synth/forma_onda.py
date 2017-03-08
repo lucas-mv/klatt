@@ -21,7 +21,7 @@ class Som:
             self._wav.append(amostra)
 
     def salvararquivo(self):
-        wave.write(self._arquivo, ctes.Amostragem.TAXA_AMOSTRAGEM, np.asarray(self._wav))
+        wave.write(self._arquivo + '.wav', ctes.Amostragem.TAXA_AMOSTRAGEM, np.asarray(self._wav))
 
 class Frame:
     _valores = []
@@ -44,6 +44,5 @@ def somar_frames(frame_1, frame_2):
     resultado = []
     for i in range(ctes.Amostragem.AMOSTRAS_FRAME):
         resultado.append(frame_1._valores[i] + frame_2._valores[i])
-    frame = Frame('')
-    frame._valores = resultado
+    frame = Frame(resultado)
     return frame
