@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="082d6881-fd23-484f-bde8-3384412145e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/constantes.py" afterPath="$PROJECT_DIR$/src/synth/constantes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/fontes.py" afterPath="$PROJECT_DIR$/src/synth/fontes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/main.py" afterPath="$PROJECT_DIR$/src/synth/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -453,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488938935221</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="desenvolvimento das fontes de ruido branco, rosa e de trem de impulsos uniforme">
+      <created>1488942470132</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1488942470132</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -485,7 +489,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="melhoria da classe util, desenvolvimento dos filtros anti ressonantes, inicio do desenvolvimento dos filtros nasais (rnp rgz) e criacao do modulo para as fontes de ruido e som" />
     <MESSAGE value="criacao da classe de fontes" />
-    <option name="LAST_COMMIT_MESSAGE" value="criacao da classe de fontes" />
+    <MESSAGE value="desenvolvimento das fontes de ruido branco, rosa e de trem de impulsos uniforme" />
+    <option name="LAST_COMMIT_MESSAGE" value="desenvolvimento das fontes de ruido branco, rosa e de trem de impulsos uniforme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
