@@ -25,6 +25,7 @@ class ParametrosConstantes:
     FNP = 250
     BNP = 100
     BNZ = 100
+    FGS = 0
     BGS = 200
     F0 = 80
 

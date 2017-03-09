@@ -11,7 +11,7 @@ def sintetizar(nome_arquivo):
     som = forma_onda.Som(nome_arquivo)
     for indice_frame in range(numero_frames):
         trem_impulso = forma_onda.Frame('imp')
-        filtro = filtros.Filtro('a', 0)
+        filtro = filtros.Filtro('a', 60, 0)
         frame_filtrado = filtro.filtrar(trem_impulso)
         som.adicionarframe(frame_filtrado)
     som.salvararquivo()
