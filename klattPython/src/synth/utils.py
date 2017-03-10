@@ -16,4 +16,12 @@ def plotar_bode(funcao_transferencia):
     axarr[1].set_title('BODE - FASE')
     axarr[1].set_xlabel('Hz')
     axarr[1].set_ylabel('Graus')
+
+def plotar_formaonda(som):
+    plt.plot(som._wav)
+    plt.title('ONDA SONORA OBTIDA')
+    plt.xlabel('AMOSTRAS')
+    plt.ylabel('INTENSIDADE')
+
+def mostrar_plots():
     plt.show()

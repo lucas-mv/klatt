@@ -34,7 +34,7 @@ class Filtro:
     def montar_numden_antiressonante(self, bw, f):
         a, b, c = self.calcularabc(bw, f)
         a_anti = 1/a
-        b_anti= -1*b/a
+        b_anti = -1*b/a
         c_anti = -1*c*a
         num = [a_anti, b_anti, c_anti]
         den = [1, 0, 0]
@@ -52,16 +52,10 @@ class Filtro:
             num_rgs[indice] = num_rgs[indice] * parametros.av
         for indice in range(len(num_rgz)):
             num_rgz[indice] = num_rgz[indice] * parametros.avs
-        num_fonte_s = np.convolve(num_rgp, num_rgs)
-        den_fonte_s = np.convolve(den_rgp, den_rgs)
-        num_fonte_z = np.convolve(num_rgp, num_rgz)
-        den_fonte_z = np.convolve(den_rgp, den_rgz)
-        num_fonte = []
-        den_fonte = []
-        for indice in range(len(num_fonte_s)):
-            num_fonte.append(num_fonte_s[indice] + num_fonte_z[indice])
-        for indice in range(len(den_fonte_s)):
-            den_fonte.append(den_fonte_s[indice] + den_fonte_z[indice])
+        num_paralelo = [num_rgs[0] + num_rgz[0], num_rgz[1], num_rgz[2]]
+        den_paralelo = [den_rgz[0] + den_rgs[0], den_rgs[1], den_rgs[2]]
+        num_fonte = np.convolve(num_rgp, num_paralelo)
+        den_fonte = np.convolve(den_rgp, den_paralelo)
         return num_fonte, den_fonte
 
     def bloco_nasal(self, parametros):

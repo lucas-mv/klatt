@@ -38,3 +38,15 @@ def gerar_ruido_rosa():
     df.fillna(method='ffill', axis=0, inplace=True)
     ruido_rosa = df.sum(axis=1).values
     return ruido_rosa
+
+def gerar_trapezio(valor_maximo, total_amostras, amostras_transicao):
+    trapezio = []
+    passo_transicao = valor_maximo/amostras_transicao
+    amostras_completas = total_amostras - 2*amostras_transicao
+    for indice in range(amostras_transicao):
+        trapezio.append(indice*passo_transicao)
+    for indice in range(amostras_completas):
+        trapezio.append(valor_maximo)
+    for indice in range(amostras_transicao):
+        trapezio.append(indice*passo_transicao)
+    return trapezio

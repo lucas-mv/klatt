@@ -15,3 +15,4 @@ def sintetizar(nome_arquivo):
         frame_filtrado = filtro.filtrar(trem_impulso)
         som.adicionarframe(frame_filtrado)
     som.salvararquivo()
+    return som
