@@ -36,3 +36,25 @@ def plotar_amostras(amostras):
 
 def mostrar_plots():
     plt.show()
+
+def maximo_absoluto(vetor):
+    maximo = 0
+    for i in range(len(vetor)):
+        if(abs(vetor[i]) > maximo):
+            maximo = abs(vetor[i])
+    return maximo
+
+def normalizar_01(serie):
+    norm = []
+    maximo = maximo_absoluto(serie)
+    for i in range(len(serie)):
+        norm[i] = (serie[i] / maximo) + 1.0
+    maximo = maximo_absoluto(norm)
+    for i in range(len(norm)):
+        norm[i] = norm[i] / maximo
+    return norm
+
+def plotar_histograma(serie):
+    count, bins, ignored = plt.hist(serie, 30, normed=True)
+    mu, sigma = ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO
+    plt.plot(bins, 1 / (sigma * np.sqrt(2 * np.pi)) *np.exp(- (bins - mu) ** 2 / (2 * sigma ** 2)), linewidth = 2, color = 'r')

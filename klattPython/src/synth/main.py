@@ -4,6 +4,7 @@ Modulo para testes do sintetizador
 
 from src.synth import utils
 import src.synth.sintetizador as sintetizador
+import src.synth.fontes as fontes
 
 def main():
     som = sintetizador.sintetizar('audios/f0=100-modSin','a')

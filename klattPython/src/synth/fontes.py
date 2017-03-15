@@ -6,6 +6,7 @@ import src.synth.constantes as ctes
 import random as rnd
 import numpy as np
 import pandas as pd
+import src.synth.utils as utils
 
 def gerar_trem_impulsos():
     trem_impulsos = []
@@ -22,6 +23,11 @@ def gerar_ruido_branco():
     for i in range(ctes.Amostragem.TOTAL_AMOSTRAS):
         ruido_branco.append(rnd.uniform(0.0, 1.0))
     return ruido_branco
+
+def gerar_ruido_gaussiano():
+    ruido = list(np.random.normal(ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO, ctes.Amostragem.TOTAL_AMOSTRAS))
+    ruido = utils.normalizar_01(ruido)
+    return ruido
 
 def gerar_ruido_rosa():
     """

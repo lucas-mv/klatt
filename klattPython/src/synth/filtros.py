@@ -108,3 +108,8 @@ def bloco_radiacao():
     num = [1, 0]
     den = [1, 1]
     return num, den
+
+def bloco_ruido():
+    num = [1, 1]
+    den = [1, 0]
+    return num, den
