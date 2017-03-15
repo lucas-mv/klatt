@@ -69,18 +69,17 @@ def montar_numden_antiressonante(bw, f):
 
 def bloco_fonte(parametros):
     num_rgp, den_rgp = montar_numden(ctes.ParametrosConstantes.BGP, ctes.ParametrosConstantes.FGP)
-    # num_rgs, den_rgs = montar_numden(ctes.ParametrosConstantes.BGS, ctes.ParametrosConstantes.FGS)
-    # num_rgz, den_rgz = montar_numden_antiressonante(ctes.ParametrosConstantes.BGZ, ctes.ParametrosConstantes.FGZ)
-    # for indice in range(len(num_rgs)):
-    #     num_rgs[indice] = num_rgs[indice] * parametros.av
-    # for indice in range(len(num_rgz)):
-    #     num_rgz[indice] = num_rgz[indice] * parametros.avs
-    # num_paralelo = [num_rgs[0] + num_rgz[0], num_rgz[1], num_rgz[2]]
-    # den_paralelo = [den_rgz[0] + den_rgs[0], den_rgs[1], den_rgs[2]]
-    # num_fonte = np.convolve(num_rgp, num_paralelo)
-    # den_fonte = np.convolve(den_rgp, den_paralelo)
-    # return num_fonte, den_fonte
-    return num_rgp, den_rgp
+    num_rgs, den_rgs = montar_numden(ctes.ParametrosConstantes.BGS, ctes.ParametrosConstantes.FGS)
+    num_rgz, den_rgz = montar_numden_antiressonante(ctes.ParametrosConstantes.BGZ, ctes.ParametrosConstantes.FGZ)
+    for indice in range(len(num_rgs)):
+        num_rgs[indice] = num_rgs[indice] * parametros.av
+    for indice in range(len(num_rgz)):
+        num_rgz[indice] = num_rgz[indice] * parametros.avs
+    num_paralelo = [num_rgs[0] + num_rgz[0], num_rgz[1], num_rgz[2]]
+    den_paralelo = [den_rgz[0] + den_rgs[0], den_rgs[1], den_rgs[2]]
+    num_fonte = np.convolve(num_rgp, num_paralelo)
+    den_fonte = np.convolve(den_rgp, den_paralelo)
+    return num_fonte, den_fonte
 
 def bloco_nasal(parametros):
     num_rnp, den_rnp = montar_numden(ctes.ParametrosConstantes.BNP, ctes.ParametrosConstantes.FNP)
