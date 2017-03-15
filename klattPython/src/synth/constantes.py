@@ -2,14 +2,14 @@
 Constantes de uso geral no módulo sintetizador. Os ganhos descritos estão em dB e as frequencias em Hz.
 """
 
-class Amostragem:
-    AMOSTRAS_FRAME = 50
-    TAXA_AMOSTRAGEM = 10000  #Hz
-    TEMPO_AMOSTRAGEM = 0.0001  #s
-
 class Gerais:
     NUMERO_FONTES_RUIDO_ROSA = 1
     TEMPO_SIMULACAO = 2  # s
+
+class Amostragem:
+    TAXA_AMOSTRAGEM = 10000  #Hz
+    TEMPO_AMOSTRAGEM = 0.0001  #s
+    AMOSTRAS_FRAME = TAXA_AMOSTRAGEM * Gerais.TEMPO_SIMULACAO
 
 class ParametrosConstantes:
     AN = 0
