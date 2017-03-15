@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="082d6881-fd23-484f-bde8-3384412145e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/constantes.py" afterPath="$PROJECT_DIR$/src/synth/constantes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/fontes.py" afterPath="$PROJECT_DIR$/src/synth/fontes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/forma_onda.py" afterPath="$PROJECT_DIR$/src/synth/forma_onda.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/main.py" afterPath="$PROJECT_DIR$/src/synth/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/sintetizador.py" afterPath="$PROJECT_DIR$/src/synth/sintetizador.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/synth/utils.py" afterPath="$PROJECT_DIR$/src/synth/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,13 +20,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="forma_onda.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/synth/forma_onda.py">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/synth/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            <state relative-caret-position="194">
+              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
               <folding>
-                <element signature="e#114#145#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,49 +35,10 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/synth/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
-                <element signature="e#44#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constantes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/synth/constantes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fontes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/synth/fontes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filtros.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/synth/filtros.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
-              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-              <folding>
-                <element signature="e#98#135#0" expanded="true" />
-                <element signature="e#1404#1592#0" expanded="false" />
-                <element signature="e#1624#1718#0" expanded="false" />
-                <element signature="e#1765#1925#0" expanded="false" />
-                <element signature="e#1960#2734#0" expanded="false" />
-                <element signature="e#2769#3086#0" expanded="false" />
-                <element signature="e#3125#3731#0" expanded="false" />
-                <element signature="e#3759#3808#0" expanded="false" />
+                <element signature="e#44#71#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,21 +47,11 @@
       <file leaf-file-name="sintetizador.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/synth/sintetizador.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+            <state relative-caret-position="311">
+              <caret line="19" column="104" lean-forward="false" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
               <folding>
                 <element signature="e#55#96#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/synth/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -140,12 +89,12 @@
         <option value="$PROJECT_DIR$/../../../pyklatt-master/klatt.py" />
         <option value="$PROJECT_DIR$/src/synth/parametros.py" />
         <option value="$PROJECT_DIR$/src/synth/filtros.py" />
-        <option value="$PROJECT_DIR$/src/synth/utils.py" />
         <option value="$PROJECT_DIR$/src/synth/fontes.py" />
-        <option value="$PROJECT_DIR$/src/synth/sintetizador.py" />
-        <option value="$PROJECT_DIR$/src/synth/main.py" />
         <option value="$PROJECT_DIR$/src/synth/constantes.py" />
         <option value="$PROJECT_DIR$/src/synth/forma_onda.py" />
+        <option value="$PROJECT_DIR$/src/synth/utils.py" />
+        <option value="$PROJECT_DIR$/src/synth/sintetizador.py" />
+        <option value="$PROJECT_DIR$/src/synth/main.py" />
       </list>
     </option>
   </component>
@@ -611,19 +560,26 @@
       <option name="project" value="LOCAL" />
       <updated>1489598662154</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refatoração de cogidos, adicição da modulação senoidal para o som de saida">
+      <created>1489606914572</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1489606914572</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32937685" sideWeight="0.58972394" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32937685" sideWeight="0.4102761" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32937685" sideWeight="0.4102761" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -657,7 +613,8 @@
     <MESSAGE value="filtragem completa do pulso e melhoria da assinatura do metodo sintetizar" />
     <MESSAGE value="inversao dos pulsos gloticos e normalizacao antes da gravacao do arquivo" />
     <MESSAGE value="remoção da classe frame que estava desnecessaria" />
-    <option name="LAST_COMMIT_MESSAGE" value="remoção da classe frame que estava desnecessaria" />
+    <MESSAGE value="refatoração de cogidos, adicição da modulação senoidal para o som de saida" />
+    <option name="LAST_COMMIT_MESSAGE" value="refatoração de cogidos, adicição da modulação senoidal para o som de saida" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -867,22 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/synth/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/synth/fontes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/synth/filtros.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-140">
@@ -900,13 +841,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/synth/sintetizador.py">
+    <entry file="file://$PROJECT_DIR$/src/synth/fontes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="24" column="48" lean-forward="false" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="e#55#96#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="714">
+          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,12 +867,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/synth/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/synth/sintetizador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="19" column="104" lean-forward="false" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
+          <folding>
+            <element signature="e#55#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/synth/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#44#79#0" expanded="true" />
+            <element signature="e#44#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
