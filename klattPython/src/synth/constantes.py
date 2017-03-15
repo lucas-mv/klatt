@@ -8,7 +8,7 @@ class Gerais:
 
 class Amostragem:
     TAXA_AMOSTRAGEM = 10000  #Hz
-    TEMPO_AMOSTRAGEM = 0.0001  #s
+    TEMPO_AMOSTRAGEM = 1/TAXA_AMOSTRAGEM  #s
     AMOSTRAS_FRAME = TAXA_AMOSTRAGEM * Gerais.TEMPO_SIMULACAO
 
 class ParametrosConstantes:

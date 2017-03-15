@@ -9,18 +9,13 @@ import pandas as pd
 
 def gerar_trem_impulsos():
     trem_impulsos = []
+    frequencia_discreta = ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0
+    tempo_discreto = int(1/frequencia_discreta)
     for i in range(ctes.Amostragem.AMOSTRAS_FRAME):
-        trem_impulsos.append(1.0)
+        trem_impulsos.append(0.0)
+    for i in range(0, ctes.Amostragem.AMOSTRAS_FRAME, tempo_discreto):
+        trem_impulsos[i] = 1.0
     return trem_impulsos
-
-def gerar_tempo():
-    lista_tempo = []
-    tempo_F0 = 1/ctes.ParametrosConstantes.F0
-    tempo = 0
-    for indice in range(ctes.Amostragem.AMOSTRAS_FRAME):
-        lista_tempo.append(tempo)
-        tempo = tempo + tempo_F0
-    return lista_tempo
 
 def gerar_ruido_branco():
     ruido_branco = []

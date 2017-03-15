@@ -26,7 +26,7 @@ def plotar_formaonda(som):
 
 def plotar_amostras(amostras):
     plt.figure()
-    plt.scatter(range(len(amostras)), amostras)
+    plt.plot(range(len(amostras)), amostras)
     plt.title('AMOSTRAS UTILIZADAS POR FRAME')
     plt.xlabel('AMOSTRAS')
     plt.ylabel('INTENSIDADE')
