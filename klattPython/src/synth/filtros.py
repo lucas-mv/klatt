@@ -5,6 +5,7 @@ Conjunto de codigos que definem o funcionamento dos filtros ressonantes do sinte
 import src.synth.parametros as params
 import src.synth.constantes as ctes
 import src.synth.forma_onda as forma_onda
+import src.synth.fontes as fontes
 import math
 import numpy as np
 from scipy import signal
@@ -110,3 +111,19 @@ class Filtro:
 
         return num, den
 
+class FiltroFormantes:
+    _numerador = []
+    _denominador = []
+
+    def __init__(self):
+        vogal = 'a'
+        av = 60
+        avs = 0
+        filtro = Filtro(vogal,av,avs)
+        parametros = params.ParametrosCascata(vogal, av, avs)
+        self._numerador, self._denominador = filtro.bloco_formantes(parametros)
+
+    def degrau(self):
+        funcao_transferencia = signal.TransferFunction(self._numerador, self._denominador, dt=ctes.Amostragem.TEMPO_AMOSTRAGEM)
+        t, y = signal.step(funcao_transferencia)
+        return y

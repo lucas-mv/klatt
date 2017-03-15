@@ -13,6 +13,15 @@ def gerar_trem_impulsos():
         trem_impulsos.append(1.0)
     return trem_impulsos
 
+def gerar_tempo():
+    lista_tempo = []
+    tempo_F0 = 1/ctes.ParametrosConstantes.F0
+    tempo = 0
+    for indice in range(ctes.Amostragem.AMOSTRAS_FRAME):
+        lista_tempo.append(tempo)
+        tempo = tempo + tempo_F0
+    return lista_tempo
+
 def gerar_ruido_branco():
     ruido_branco = []
     for i in range(ctes.Amostragem.AMOSTRAS_FRAME):
@@ -48,5 +57,5 @@ def gerar_trapezio(valor_maximo, total_amostras, amostras_transicao):
     for indice in range(amostras_completas):
         trapezio.append(valor_maximo)
     for indice in range(amostras_transicao):
-        trapezio.append(indice*passo_transicao)
+        trapezio.append(valor_maximo - indice*passo_transicao)
     return trapezio

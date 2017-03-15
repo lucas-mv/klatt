@@ -9,17 +9,25 @@ def bode_numerador_denominador(num, den):
 def plotar_bode(funcao_transferencia):
     w, mag, phase = funcao_transferencia.bode()
     f, axarr = plt.subplots(2, sharex=True)
-    axarr[0].semilogx(w, mag)
+    axarr[0].plot(w, mag)
     axarr[0].set_title('BODE - MAGNITUDE')
     axarr[0].set_ylabel('dB')
-    axarr[1].semilogx(w, phase)
+    axarr[1].plot(w, phase)
     axarr[1].set_title('BODE - FASE')
     axarr[1].set_xlabel('Hz')
     axarr[1].set_ylabel('Graus')
 
 def plotar_formaonda(som):
+    plt.figure()
     plt.plot(som._wav)
     plt.title('ONDA SONORA OBTIDA')
+    plt.xlabel('AMOSTRAS')
+    plt.ylabel('INTENSIDADE')
+
+def plotar_amostras(amostras):
+    plt.figure()
+    plt.scatter(range(len(amostras)), amostras)
+    plt.title('AMOSTRAS UTILIZADAS POR FRAME')
     plt.xlabel('AMOSTRAS')
     plt.ylabel('INTENSIDADE')
 

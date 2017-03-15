@@ -39,6 +39,9 @@ class Frame:
         else :
             self._valores = parametro
 
+    def modular(self, multiplicador):
+        for indice in range(len(self._valores)):
+            self._valores[indice] = self._valores[indice] * multiplicador
 
 def somar_frames(frame_1, frame_2):
     resultado = []
