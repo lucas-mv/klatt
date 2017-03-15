@@ -9,20 +9,18 @@ import src.synth.fontes as fontes
 
 def sintetizar(nome_arquivo, vogal):
     som = forma_onda.Som(nome_arquivo)
-    trem_impulso = forma_onda.Frame('imp')
 
     filtro_fontes = filtros.FiltroFontes(vogal, 60, 0)
     filtro_nasal = filtros.FiltroNasal(vogal)
     filtro_formantes = filtros.FiltroFormantes(vogal)
     filtro_radiacao = filtros.FiltroRadiacao()
 
-    frame_filtrado = filtro_fontes.filtrar(trem_impulso)
-    frame_filtrado.inverter()
-    frame_filtrado = filtro_nasal.filtrar(frame_filtrado)
-    frame_filtrado = filtro_formantes.filtrar(frame_filtrado)
-    frame_filtrado = filtro_radiacao.filtrar(frame_filtrado)
-    frame_filtrado.normalizar()
+    som._valores = filtro_fontes.filtrar(som._valores)
+    som.inverter()
+    som._valores = filtro_nasal.filtrar(som._valores)
+    som._valores = filtro_formantes.filtrar(som._valores)
+    som._valores = filtro_radiacao.filtrar(som._valores)
+    som.normalizar()
 
-    som.adicionarframe(frame_filtrado)
     som.salvararquivo()
     return som

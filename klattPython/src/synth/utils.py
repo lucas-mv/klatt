@@ -19,7 +19,7 @@ def plotar_bode(funcao_transferencia):
 
 def plotar_formaonda(som):
     plt.figure()
-    plt.plot(som._wav)
+    plt.plot(som._valores)
     plt.title('ONDA SONORA OBTIDA')
     plt.xlabel('AMOSTRAS')
     plt.ylabel('INTENSIDADE')

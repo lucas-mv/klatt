@@ -15,8 +15,8 @@ class Filtro:
 
     def filtrar(self, frame):
         funcao_transferencia = signal.TransferFunction(self._numerador, self._denominador, dt=ctes.Amostragem.TEMPO_AMOSTRAGEM)
-        x, y = signal.dlsim(funcao_transferencia, frame._valores)
-        return forma_onda.Frame(y)
+        x, y = signal.dlsim(funcao_transferencia, frame)
+        return y
 
 class FiltroFormantes(Filtro):
 
