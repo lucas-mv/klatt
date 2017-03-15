@@ -128,7 +128,7 @@ class ParametrosCascata:
 
     # </editor-fold>
 
-    def __init__(self, vogal, av, avs):
+    def __init__(self, vogal, av=None, avs=None):
         if(vogal=='a'):
             parametros = ctes.VogalA
             self._b1 = parametros.B1

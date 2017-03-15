@@ -13,7 +13,7 @@ def sintetizar(nome_arquivo):
     controle_intensidade = fontes.gerar_trapezio(1.0, numero_frames, int(numero_frames*0.1))
     for indice_frame in range(numero_frames):
         trem_impulso = forma_onda.Frame('imp')
-        filtro = filtros.Filtro('a', 60, 0)
+        filtro = filtros.FiltroFontes('a', 60, 0)
         frame_filtrado = filtro.filtrar(trem_impulso)
         frame_filtrado.modular(controle_intensidade[indice_frame])
         som.adicionarframe(frame_filtrado)
