@@ -20,7 +20,7 @@ class Som:
 
     def modular(self, multiplicador):
         for indice in range(len(self._valores)):
-            self._valores[indice] = self._valores[indice] * multiplicador
+            self._valores[indice] = self._valores[indice] * multiplicador[indice]
 
     def inverter(self):
         self._valores = list(reversed(self._valores))

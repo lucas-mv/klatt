@@ -9,7 +9,7 @@ import src.synth.sintetizador as sintetizador
 
 def main():
     utils.plotar_amostras(fontes.gerar_trem_impulsos())
-    som = sintetizador.sintetizar('audios/fontes','a')
+    som = sintetizador.sintetizar('audios/f0=100-modSin','a')
     utils.plotar_formaonda(som)
     filtro = filtros.FiltroFontes(vogal='a', av=60, avs=0)
     utils.bode_numerador_denominador(filtro._numerador, filtro._denominador)

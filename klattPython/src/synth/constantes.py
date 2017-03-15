@@ -5,11 +5,12 @@ Constantes de uso geral no módulo sintetizador. Os ganhos descritos estão em d
 class Gerais:
     NUMERO_FONTES_RUIDO_ROSA = 1
     TEMPO_SIMULACAO = 2  # s
+    PORCENTAGEM_MODULACAO_SENOIDAL = 0.2
 
 class Amostragem:
     TAXA_AMOSTRAGEM = 10000  #Hz
     TEMPO_AMOSTRAGEM = 1/TAXA_AMOSTRAGEM  #s
-    AMOSTRAS_FRAME = TAXA_AMOSTRAGEM * Gerais.TEMPO_SIMULACAO
+    TOTAL_AMOSTRAS = TAXA_AMOSTRAGEM * Gerais.TEMPO_SIMULACAO
 
 class ParametrosConstantes:
     AN = 0
@@ -27,7 +28,7 @@ class ParametrosConstantes:
     BNZ = 100
     FGS = 0
     BGS = 200
-    F0 = 80
+    F0 = 100
 
 class VogalA:
     F1 = 620

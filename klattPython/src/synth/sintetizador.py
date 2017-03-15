@@ -20,7 +20,9 @@ def sintetizar(nome_arquivo, vogal):
     som._valores = filtro_nasal.filtrar(som._valores)
     som._valores = filtro_formantes.filtrar(som._valores)
     som._valores = filtro_radiacao.filtrar(som._valores)
+
     som.normalizar()
+    som.modular(fontes.gerar_modulantesenoidal())
 
     som.salvararquivo()
     return som
