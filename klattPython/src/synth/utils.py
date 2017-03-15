@@ -14,7 +14,7 @@ def plotar_bode(funcao_transferencia):
     axarr[0].set_ylabel('dB')
     axarr[1].plot(w, phase)
     axarr[1].set_title('BODE - FASE')
-    axarr[1].set_xlabel('Hz')
+    axarr[1].set_xlabel('rad/s')
     axarr[1].set_ylabel('Graus')
 
 def plotar_formaonda(som):

@@ -43,6 +43,17 @@ class Frame:
         for indice in range(len(self._valores)):
             self._valores[indice] = self._valores[indice] * multiplicador
 
+    def inverter(self):
+        self._valores = list(reversed(self._valores))
+
+    def normalizar(self):
+        valor_maximo = 0
+        for i in range(len(self._valores)):
+            if (abs(self._valores[i]) > valor_maximo):
+                valor_maximo = abs(self._valores[i])
+        for i in range(len(self._valores)):
+            self._valores[i] = self._valores[i]/valor_maximo
+
 def somar_frames(frame_1, frame_2):
     resultado = []
     for i in range(ctes.Amostragem.AMOSTRAS_FRAME):

@@ -17,9 +17,11 @@ def sintetizar(nome_arquivo, vogal):
     filtro_radiacao = filtros.FiltroRadiacao()
 
     frame_filtrado = filtro_fontes.filtrar(trem_impulso)
+    frame_filtrado.inverter()
     frame_filtrado = filtro_nasal.filtrar(frame_filtrado)
     frame_filtrado = filtro_formantes.filtrar(frame_filtrado)
     frame_filtrado = filtro_radiacao.filtrar(frame_filtrado)
+    frame_filtrado.normalizar()
 
     som.adicionarframe(frame_filtrado)
     som.salvararquivo()
