@@ -12,10 +12,10 @@ def plotar_bode(funcao_transferencia, titulo):
     for i in range(len(w)):
         w[i] = w[i]/(2*np.pi*1000)
     f, axarr = plt.subplots(2, sharex=True)
-    axarr[0].plot(w, mag)
+    axarr[0].semilogx(w, mag)
     axarr[0].set_title('BODE - MAGNITUDE: ' + titulo)
     axarr[0].set_ylabel('dB')
-    axarr[1].plot(w, phase)
+    axarr[1].semilogx(w, phase)
     axarr[1].set_title('BODE - FASE')
     axarr[1].set_xlabel('kHz')
     axarr[1].set_ylabel('Graus')

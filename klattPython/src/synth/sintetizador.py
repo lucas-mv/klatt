@@ -18,6 +18,9 @@ def sintetizar(nome_arquivo, vogal):
     utils.bode_numerador_denominador(filtro_formantes._numerador, filtro_formantes._denominador, 'FORMANTES')
     filtro_radiacao = filtros.FiltroRadiacao()
     utils.bode_numerador_denominador(filtro_radiacao._numerador, filtro_radiacao._denominador, 'RADIAÇÃO')
+    filtro_ruido = filtros.FiltroRuido()
+    utils.bode_numerador_denominador(filtro_ruido._numerador, filtro_ruido._denominador, 'RUÍDO')
+
 
     som._valores = filtro_fontes.filtrar(som._valores)
     som.inverter()

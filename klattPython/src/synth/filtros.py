@@ -45,6 +45,12 @@ class FiltroRadiacao(Filtro):
         Filtro.__init__(self)
         self._numerador, self._denominador = bloco_radiacao()
 
+class FiltroRuido(Filtro):
+
+    def __init__(self):
+        Filtro.__init__(self)
+        self._numerador, self._denominador = bloco_ruido()
+
 def calcularabc(bw, f):
     t = ctes.Amostragem.TEMPO_AMOSTRAGEM
     c = -1 * math.exp(-2 * np.pi * bw * t)
