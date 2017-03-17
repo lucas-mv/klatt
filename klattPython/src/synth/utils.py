@@ -31,12 +31,15 @@ def plotar_formaonda(som):
     plt.ylabel('INTENSIDADE')
 
 
-def plotar_amostras(amostras):
+def plotar(amostras, titulo='', xlabel='', ylabel='', tipo='lin'):
     plt.figure()
-    plt.plot(range(len(amostras)), amostras)
-    plt.title('AMOSTRAS UTILIZADAS POR FRAME')
-    plt.xlabel('AMOSTRAS')
-    plt.ylabel('INTENSIDADE')
+    if tipo == 'lin':
+        plt.plot(range(len(amostras)), amostras)
+    elif tipo == 'sctr':
+        plt.scatter(range(len(amostras)), amostras)
+    plt.title(titulo)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
 
 
 def mostrar_plots():
@@ -63,3 +66,10 @@ def plotar_histograma(serie):
     count, bins, ignored = plt.hist(serie, 30, normed=True)
     mu, sigma = ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO
     plt.plot(bins, 1 (sigma * np.sqrt(2 * np.pi))*np.exp(- (bins - mu)**2/(2 * sigma ** 2)), linewidth=2, color='r')
+
+
+def modular_amplitude(sinal, modulante):
+    mod = []
+    for i in range(len(sinal)):
+        mod.append(sinal[i]*modulante[i])
+    return mod

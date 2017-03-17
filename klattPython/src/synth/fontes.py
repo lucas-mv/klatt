@@ -33,6 +33,17 @@ def ruido_gaussiano():
     return ruido
 
 
+def onda_quadrada():
+    sqr = []
+    for i in range(ctes.Amostragem.TOTAL_AMOSTRAS):
+        sqr.append(np.sin(2*np.pi*ctes.ParametrosConstantes.F0*i/ctes.Amostragem.TAXA_AMOSTRAGEM))
+        if sqr[i] >= 0.0:
+            sqr[i] = 1.0
+        else:
+            sqr[i] = 0.0
+    return sqr
+
+
 def ruido_rosa():
     """
     Implementado de acordo com a descricao em https://www.dsprelated.com/showarticle/908.php
@@ -65,3 +76,4 @@ def modulantesenoidal():
         angulo = (np.pi / 2.0) * i / transicao
         mod.append(np.cos(angulo))
     return mod
+

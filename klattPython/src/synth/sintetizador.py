@@ -26,10 +26,11 @@ def sintetizar(nome_arquivo, vogal):
     som.inverter()
     som.normalizar()
 
-    ruido = fontes.ruido_gaussiano()
-    ruido_filtrado = filtro_ruido.filtrar(ruido)
-    ruido_filtrado = utils.normalizar(ruido_filtrado)
-    som.somarruido(ruido_filtrado, -3.0)
+    ruido = filtro_ruido.filtrar(fontes.ruido_gaussiano())
+    ruido = utils.normalizar(ruido)
+    ruido = utils.modular_amplitude(ruido, fontes.onda_quadrada())
+    utils.plotar(ruido, 'RUIDO', 'AMOSTRAS', 'INTENSIDADE')
+    som.somarruido(ruido, -6.0)
 
     som.valores = filtro_nasal.filtrar(som.valores)
     som.valores = filtro_formantes.filtrar(som.valores)
