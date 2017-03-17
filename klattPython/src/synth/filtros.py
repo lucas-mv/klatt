@@ -8,6 +8,7 @@ import math
 import numpy as np
 from scipy import signal
 
+
 class Filtro:
     _numerador = None
     _denominador = None
@@ -17,12 +18,14 @@ class Filtro:
         x, y = signal.dlsim(funcao_transferencia, frame)
         return y
 
+
 class FiltroFormantes(Filtro):
 
     def __init__(self, vogal):
         Filtro.__init__(self)
         parametros = params.ParametrosCascata(vogal)
         self._numerador, self._denominador = bloco_formantes(parametros)
+
 
 class FiltroFontes(Filtro):
 
@@ -31,6 +34,7 @@ class FiltroFontes(Filtro):
         parametros = params.ParametrosCascata(vogal, av, avs)
         self._numerador, self._denominador = bloco_fonte(parametros)
 
+
 class FiltroNasal(Filtro):
 
     def __init__(self, vogal):
@@ -38,11 +42,13 @@ class FiltroNasal(Filtro):
         parametros = params.ParametrosCascata(vogal)
         self._numerador, self._denominador = bloco_nasal(parametros)
 
+
 class FiltroRadiacao(Filtro):
 
     def __init__(self):
         Filtro.__init__(self)
         self._numerador, self._denominador = bloco_radiacao()
+
 
 class FiltroRuido(Filtro):
 
@@ -50,27 +56,31 @@ class FiltroRuido(Filtro):
         Filtro.__init__(self)
         self._numerador, self._denominador = bloco_ruido()
 
+
 def calcularabc(bw, f):
     t = ctes.Amostragem.TEMPO_AMOSTRAGEM
-    c = -1 * math.exp(-2 * np.pi * bw * t)
-    b = 2 * math.exp(-1 * np.pi * bw * t) * math.cos(2 * np.pi * t * f)
-    a = 1 - b - c
+    c = -1.0 * math.exp(-2.0 * np.pi * bw * t)
+    b = 2.0 * math.exp(-1.0 * np.pi * bw * t) * math.cos(2.0 * np.pi * t * f)
+    a = 1.0 - b - c
     return a, b, c
+
 
 def montar_numden(bw, f):
     a, b, c = calcularabc(bw, f)
-    num = [a, 0, 0]
-    den = [1, -1*b, -1*c]
+    num = [a, 0.0, 0.0]
+    den = [1.0, -1.0*b, -1.0*c]
     return num, den
+
 
 def montar_numden_antiressonante(bw, f):
     a, b, c = calcularabc(bw, f)
-    a_anti = 1/a
-    b_anti = -1*b/a
-    c_anti = -1*c*a
+    a_anti = 1.0/a
+    b_anti = -1.0*b/a
+    c_anti = -1.0*c*a
     num = [a_anti, b_anti, c_anti]
-    den = [1, 0, 0]
+    den = [1.0, 0.0, 0.0]
     return num, den
+
 
 def bloco_fonte(parametros):
     num_rgp, den_rgp = montar_numden(ctes.ParametrosConstantes.BGP, ctes.ParametrosConstantes.FGP)
@@ -86,12 +96,14 @@ def bloco_fonte(parametros):
     den_fonte = np.convolve(den_rgp, den_paralelo)
     return num_fonte, den_fonte
 
+
 def bloco_nasal(parametros):
     num_rnp, den_rnp = montar_numden(ctes.ParametrosConstantes.BNP, ctes.ParametrosConstantes.FNP)
     num_rnz, den_rnz = montar_numden_antiressonante(ctes.ParametrosConstantes.BNZ, parametros.fnz)
     num_nasal = np.convolve(num_rnp, num_rnz)
     den_nasal = np.convolve(den_rnp, den_rnz)
     return num_nasal, den_nasal
+
 
 def bloco_formantes(parametros):
     num_1, den_1 = montar_numden(parametros.b1, parametros.f1)
@@ -109,12 +121,15 @@ def bloco_formantes(parametros):
     den = np.convolve(den, den_5)
     return num, den
 
+
 def bloco_radiacao():
-    num = [1, 0]
-    den = [1, 1]
+    num = [1.0, -1.0]
+    den = [1.0, 0.0]
     return num, den
 
+
 def bloco_ruido():
-    num = [1, 1]
-    den = [1, 0]
+    num = [1.0, 0.0]
+    den = [1.0, -1.0]
     return num, den
+
