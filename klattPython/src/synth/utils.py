@@ -1,6 +1,6 @@
 from scipy import signal
 import matplotlib.pyplot as plt
-import src.synth.constantes as ctes
+import klattPython.src.synth.constantes as ctes
 import numpy as np
 
 def bode_numerador_denominador(num, den, titulo):
