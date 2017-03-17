@@ -2,6 +2,7 @@
 Constantes de uso geral no módulo sintetizador. Os ganhos descritos estão em dB e as frequencias em Hz.
 """
 
+
 class Gerais:
     NUMERO_FONTES_RUIDO_ROSA = 1
     TEMPO_SIMULACAO = 2  # s
@@ -9,10 +10,12 @@ class Gerais:
     DESVIO_PADRAO_RUIDO = 0.1
     CENTRO_RUIDO = 0.0
 
+
 class Amostragem:
-    TAXA_AMOSTRAGEM = 10000  #Hz
-    TEMPO_AMOSTRAGEM = 1/TAXA_AMOSTRAGEM  #s
+    TAXA_AMOSTRAGEM = 10000  # Hz
+    TEMPO_AMOSTRAGEM = 1/TAXA_AMOSTRAGEM  # s
     TOTAL_AMOSTRAS = TAXA_AMOSTRAGEM * Gerais.TEMPO_SIMULACAO
+
 
 class ParametrosConstantes:
     AN = 0
@@ -31,6 +34,7 @@ class ParametrosConstantes:
     FGS = 0
     BGS = 200
     F0 = 100
+
 
 class VogalA:
     F1 = 620

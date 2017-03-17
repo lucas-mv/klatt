@@ -10,8 +10,17 @@ from scipy import signal
 
 
 class Filtro:
+
     _numerador = None
     _denominador = None
+
+    @property
+    def numerador(self):
+        return self._numerador
+
+    @property
+    def denominador(self):
+        return self._denominador
 
     def filtrar(self, frame):
         funcao_transferencia = signal.TransferFunction(self._numerador, self._denominador, dt=ctes.Amostragem.TEMPO_AMOSTRAGEM)

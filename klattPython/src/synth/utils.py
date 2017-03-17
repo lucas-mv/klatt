@@ -3,14 +3,16 @@ import matplotlib.pyplot as plt
 import src.synth.constantes as ctes
 import numpy as np
 
+
 def bode_numerador_denominador(num, den, titulo):
     filtro = signal.TransferFunction(num, den, dt=ctes.Amostragem.TEMPO_AMOSTRAGEM)
     plotar_bode(filtro, titulo)
 
+
 def plotar_bode(funcao_transferencia, titulo):
     w, mag, phase = funcao_transferencia.bode()
     for i in range(len(w)):
-        w[i] = w[i]/(2*np.pi*1000)
+        w[i] /= np.pi * 2000
     f, axarr = plt.subplots(2, sharex=True)
     axarr[0].semilogx(w, mag)
     axarr[0].set_title('BODE - MAGNITUDE: ' + titulo)
@@ -20,12 +22,14 @@ def plotar_bode(funcao_transferencia, titulo):
     axarr[1].set_xlabel('kHz')
     axarr[1].set_ylabel('Graus')
 
+
 def plotar_formaonda(som):
     plt.figure()
-    plt.plot(som._valores)
+    plt.plot(som.valores)
     plt.title('ONDA SONORA OBTIDA')
     plt.xlabel('AMOSTRAS')
     plt.ylabel('INTENSIDADE')
+
 
 def plotar_amostras(amostras):
     plt.figure()
@@ -34,15 +38,18 @@ def plotar_amostras(amostras):
     plt.xlabel('AMOSTRAS')
     plt.ylabel('INTENSIDADE')
 
+
 def mostrar_plots():
     plt.show()
+
 
 def maximo_absoluto(vetor):
     maximo = 0
     for i in range(len(vetor)):
-        if(abs(vetor[i]) > maximo):
+        if abs(vetor[i]) > maximo:
             maximo = abs(vetor[i])
     return maximo
+
 
 def normalizar_01(serie):
     norm = []
@@ -54,7 +61,8 @@ def normalizar_01(serie):
         norm[i] = norm[i] / maximo
     return norm
 
+
 def plotar_histograma(serie):
     count, bins, ignored = plt.hist(serie, 30, normed=True)
     mu, sigma = ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO
-    plt.plot(bins, 1 / (sigma * np.sqrt(2 * np.pi)) *np.exp(- (bins - mu) ** 2 / (2 * sigma ** 2)), linewidth = 2, color = 'r')
+    plt.plot(bins, 1 (sigma * np.sqrt(2 * np.pi))*np.exp(- (bins - mu)**2/(2 * sigma ** 2)), linewidth=2, color='r')
