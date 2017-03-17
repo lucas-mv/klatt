@@ -51,14 +51,11 @@ def maximo_absoluto(vetor):
     return maximo
 
 
-def normalizar_01(serie):
+def normalizar(serie):
     norm = []
     maximo = maximo_absoluto(serie)
     for i in range(len(serie)):
-        norm[i] = (serie[i] / maximo) + 1.0
-    maximo = maximo_absoluto(norm)
-    for i in range(len(norm)):
-        norm[i] = norm[i] / maximo
+        norm.append(serie[i] / maximo)
     return norm
 
 

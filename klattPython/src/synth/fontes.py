@@ -8,28 +8,32 @@ import numpy as np
 import pandas as pd
 import src.synth.utils as utils
 
-def gerar_trem_impulsos():
-    trem_impulsos = []
+
+def trem_impulsos():
+    imp = []
     frequencia_discreta = ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0
     tempo_discreto = int(1/frequencia_discreta)
     for i in range(ctes.Amostragem.TOTAL_AMOSTRAS):
-        trem_impulsos.append(0.0)
+        imp.append(0.0)
     for i in range(0, ctes.Amostragem.TOTAL_AMOSTRAS, tempo_discreto):
-        trem_impulsos[i] = 1.0
-    return trem_impulsos
+        imp[i] = 1.0
+    return imp
 
-def gerar_ruido_branco():
-    ruido_branco = []
+
+def ruido_branco():
+    noise = []
     for i in range(ctes.Amostragem.TOTAL_AMOSTRAS):
         ruido_branco.append(rnd.uniform(0.0, 1.0))
-    return ruido_branco
+    return noise
 
-def gerar_ruido_gaussiano():
+
+def ruido_gaussiano():
     ruido = list(np.random.normal(ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO, ctes.Amostragem.TOTAL_AMOSTRAS))
-    ruido = utils.normalizar_01(ruido)
+    ruido = utils.normalizar(ruido)
     return ruido
 
-def gerar_ruido_rosa():
+
+def ruido_rosa():
     """
     Implementado de acordo com a descricao em https://www.dsprelated.com/showarticle/908.php
     """
@@ -46,18 +50,18 @@ def gerar_ruido_rosa():
 
     df = pd.DataFrame(array)
     df.fillna(method='ffill', axis=0, inplace=True)
-    ruido_rosa = df.sum(axis=1).values
-    return ruido_rosa
+    return df.sum(axis=1).values
 
-def gerar_modulantesenoidal():
+
+def modulantesenoidal():
     mod = []
     transicao = int(ctes.Gerais.PORCENTAGEM_MODULACAO_SENOIDAL * ctes.Amostragem.TOTAL_AMOSTRAS / 2)
     for i in range(transicao):
-        angulo = (np.pi/2)*i/transicao
+        angulo = (np.pi/2.0)*i/transicao
         mod.append(np.sin(angulo))
     for i in range(int(ctes.Amostragem.TOTAL_AMOSTRAS-2*transicao)):
-        mod.append((1.0))
+        mod.append(1.0)
     for i in range(transicao):
-        angulo = (np.pi / 2) * i / transicao
+        angulo = (np.pi / 2.0) * i / transicao
         mod.append(np.cos(angulo))
     return mod

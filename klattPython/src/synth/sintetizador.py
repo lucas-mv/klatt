@@ -22,19 +22,21 @@ def sintetizar(nome_arquivo, vogal):
     filtro_ruido = filtros.FiltroRuido()
     utils.bode_numerador_denominador(filtro_ruido.numerador, filtro_ruido.denominador, 'RUÍDO')
 
-    som._valores = filtro_fontes.filtrar(som.valores)
+    som.valores = filtro_fontes.filtrar(som.valores)
     som.inverter()
+    som.normalizar()
 
-    ruido = fontes.gerar_ruido_gaussiano()
+    ruido = fontes.ruido_gaussiano()
     ruido_filtrado = filtro_ruido.filtrar(ruido)
-    som.somarruido(ruido_filtrado, 0.0)
+    ruido_filtrado = utils.normalizar(ruido_filtrado)
+    som.somarruido(ruido_filtrado, -3.0)
 
-    som._valores = filtro_nasal.filtrar(som.valores)
-    som._valores = filtro_formantes.filtrar(som.valores)
-    som._valores = filtro_radiacao.filtrar(som.valores)
+    som.valores = filtro_nasal.filtrar(som.valores)
+    som.valores = filtro_formantes.filtrar(som.valores)
+    som.valores = filtro_radiacao.filtrar(som.valores)
 
     som.normalizar()
-    som.modular(fontes.gerar_modulantesenoidal())
+    som.modular(fontes.modulantesenoidal())
 
     som.salvararquivo()
     return som
