@@ -2,8 +2,8 @@
 Conjunto de codigos que definem o funcionamento dos filtros ressonantes do sintetizador.
 """
 
-import klattPython.src.synth.parametros as params
-import klattPython.src.synth.constantes as ctes
+import src.synth.parametros as params
+import src.synth.constantes as ctes
 import math
 import numpy as np
 from scipy import signal

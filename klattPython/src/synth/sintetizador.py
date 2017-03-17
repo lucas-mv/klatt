@@ -2,10 +2,10 @@
 Modulo para geracao de som com o sintetizador
 """
 
-import klattPython.src.synth.forma_onda as forma_onda
-import klattPython.src.synth.filtros as filtros
-import klattPython.src.synth.fontes as fontes
-import klattPython.src.synth.utils as utils
+import src.synth.forma_onda as forma_onda
+import src.synth.filtros as filtros
+import src.synth.fontes as fontes
+import src.synth.utils as utils
 
 def sintetizar(nome_arquivo, vogal):
     som = forma_onda.Som(nome_arquivo)

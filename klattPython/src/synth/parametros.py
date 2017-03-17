@@ -3,7 +3,7 @@ Definicoes de parametros do sintetizador, geral e generico para varios tipo de v
 Os ganhos descritos estão em dB e as frequencias em Hz.
 """
 
-import klattPython.src.synth.constantes as ctes
+import src.synth.constantes as ctes
 
 class ParametrosCascata:
 
