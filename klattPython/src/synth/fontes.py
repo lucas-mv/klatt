@@ -2,11 +2,11 @@
 Modulo para geracao das fontes de ruido e de sonorizacao
 """
 
-import src.synth.constantes as ctes
+import synth.constantes as ctes
 import random as rnd
 import numpy as np
 import pandas as pd
-import src.synth.utils as utils
+import synth.utils as utils
 
 
 def trem_impulsos():

@@ -2,8 +2,8 @@
 Modulo para testes do sintetizador
 """
 
-from src.synth import utils
-import src.synth.sintetizador as sintetizador
+from synth import utils
+import synth.sintetizador as sintetizador
 
 
 def main():

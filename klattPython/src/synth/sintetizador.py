@@ -2,10 +2,10 @@
 Modulo para geracao de som com o sintetizador
 """
 
-import src.synth.forma_onda as forma_onda
-import src.synth.filtros as filtros
-import src.synth.fontes as fontes
-import src.synth.utils as utils
+import synth.forma_onda as forma_onda
+import synth.filtros as filtros
+import synth.fontes as fontes
+import synth.utils as utils
 
 
 def sintetizar(nome_arquivo, vogal):

@@ -3,9 +3,9 @@ Modulo para guardar os dados da forma de onda gerada e quando possivel adiciona-
 """
 
 import scipy.io.wavfile as wave
-import src.synth.constantes as ctes
-import src.synth.fontes as fontes
-import src.synth.utils as utils
+import synth.constantes as ctes
+import synth.fontes as fontes
+import synth.utils as utils
 import numpy as np
 
 
