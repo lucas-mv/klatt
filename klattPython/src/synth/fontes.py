@@ -20,6 +20,24 @@ def trem_impulsos():
     return imp
 
 
+def pulso_glotico(porcentagem_glotal, k):
+    pulso = []
+    frequencia_discreta = ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0
+    tempo_discreto = int(1.0 / frequencia_discreta)
+    wg = ctes.ParametrosConstantes.F0 * 2.0 * np.pi / porcentagem_glotal
+    t_subida = int(np.pi * ctes.Amostragem.TAXA_AMOSTRAGEM / wg)
+    t_descida = int(((1.0/wg) * np.arccos((k - 1.0) / k)) * ctes.Amostragem.TAXA_AMOSTRAGEM)
+    t_vazio = int(tempo_discreto - t_subida - t_descida)
+    for i in range(t_subida):
+        u = 0.5 * (1.0 - np.cos(wg * i / ctes.Amostragem.TAXA_AMOSTRAGEM))
+        pulso.append(u)
+    for i in range(t_descida):
+        u = (k * np.cos(wg * i / ctes.Amostragem.TAXA_AMOSTRAGEM) - k + 1.0)
+        pulso.append(u)
+    for i in range(t_vazio):
+        pulso.append(0.0)
+    return pulso
+
 def ruido_branco():
     noise = []
     for i in range(ctes.Amostragem.TOTAL_AMOSTRAS):
