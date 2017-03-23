@@ -21,6 +21,12 @@ def trem_impulsos():
 
 
 def pulso_glotico(porcentagem_glotal, k):
+    """
+    Implementado segundo FANT, 1979, Vocal source analysis - a progress report
+    :param porcentagem_glotal: porcentagem do periodo fundamental que forma o periodo do pulso glotico
+    :param k: parametro do metodo descrito, nos da a queda do pulso
+    :return: list
+    """
     pulso = []
     frequencia_discreta = ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0
     tempo_discreto = int(1.0 / frequencia_discreta)
