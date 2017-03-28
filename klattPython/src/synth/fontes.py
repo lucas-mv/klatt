@@ -19,6 +19,16 @@ def trem_impulsos():
         imp[i] = 1.0
     return imp
 
+def trem_pulsos_gloticos(porcentagem_glotal, k):
+    pulsos = []
+    periodo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0))
+    num_pulsos = int(ctes.Amostragem.TOTAL_AMOSTRAS/periodo_discreto)
+    for pulso in range(num_pulsos):
+        pulso_glot = pulso_glotico(porcentagem_glotal, k)
+        for amostra in range(len(pulso_glot)):
+            pulsos.append(pulso_glot[amostra])
+    return pulsos
+
 
 def pulso_glotico(porcentagem_glotal, k):
     """
@@ -28,8 +38,7 @@ def pulso_glotico(porcentagem_glotal, k):
     :return: list
     """
     pulso = []
-    frequencia_discreta = ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0
-    tempo_discreto = int(1.0 / frequencia_discreta)
+    tempo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0))
     wg = ctes.ParametrosConstantes.F0 * 2.0 * np.pi / porcentagem_glotal
     t_subida = int(np.pi * ctes.Amostragem.TAXA_AMOSTRAGEM / wg)
     t_descida = int(((1.0/wg) * np.arccos((k - 1.0) / k)) * ctes.Amostragem.TAXA_AMOSTRAGEM)
@@ -40,8 +49,9 @@ def pulso_glotico(porcentagem_glotal, k):
     for i in range(t_descida):
         u = (k * np.cos(wg * i / ctes.Amostragem.TAXA_AMOSTRAGEM) - k + 1.0)
         pulso.append(u)
+    ruido = ruido_gaussiano(t_vazio)
     for i in range(t_vazio):
-        pulso.append(0.0)
+        pulso.append(ruido[i])
     return pulso
 
 def ruido_branco():
@@ -51,8 +61,8 @@ def ruido_branco():
     return noise
 
 
-def ruido_gaussiano():
-    ruido = list(np.random.normal(ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO, ctes.Amostragem.TOTAL_AMOSTRAS))
+def ruido_gaussiano(numero_amostras):
+    ruido = list(np.random.normal(ctes.Gerais.CENTRO_RUIDO, ctes.Gerais.DESVIO_PADRAO_RUIDO, numero_amostras))
     ruido = utils.normalizar(ruido)
     return ruido
 
