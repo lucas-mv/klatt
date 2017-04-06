@@ -73,3 +73,10 @@ def modular_amplitude(sinal, modulante):
     for i in range(len(sinal)):
         mod.append(sinal[i]*modulante[i])
     return mod
+
+
+def modular_escalar(sinal, escalar):
+    mod = []
+    for valor in sinal:
+        mod.append(valor*escalar)
+    return mod
