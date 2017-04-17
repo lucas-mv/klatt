@@ -9,6 +9,7 @@ class Gerais:
     PORCENTAGEM_MODULACAO_SENOIDAL = 0.2
     DESVIO_PADRAO_RUIDO = 0.1
     CENTRO_RUIDO = 0.0
+    VARIACAO_F0 = 0.05
 
 
 class Amostragem:
@@ -33,7 +34,7 @@ class ParametrosConstantes:
     BNZ = 100
     FGS = 0
     BGS = 200
-    F0 = 220
+    F0 = 150
 
 
 class VogalA:

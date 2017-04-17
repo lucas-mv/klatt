@@ -19,18 +19,18 @@ def trem_impulsos():
         imp[i] = 1.0
     return imp
 
-def trem_pulsos_gloticos(porcentagem_glotal, k):
+def trem_pulsos_gloticos(porcentagem_glotal, k, ganho_pulso, ganho_ruido):
     pulsos = []
     periodo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0))
     num_pulsos = int(ctes.Amostragem.TOTAL_AMOSTRAS/periodo_discreto)
     for pulso in range(num_pulsos):
-        pulso_glot = pulso_glotico(porcentagem_glotal, k)
+        pulso_glot = pulso_glotico(porcentagem_glotal, k, ganho_pulso, ganho_ruido)
         for amostra in range(len(pulso_glot)):
             pulsos.append(pulso_glot[amostra])
     return pulsos
 
 
-def pulso_glotico(porcentagem_glotal, k):
+def pulso_glotico(porcentagem_glotal, k, ganho_pulso, ganho_ruido):
     """
     Implementado segundo FANT, 1979, Vocal source analysis - a progress report
     :param porcentagem_glotal: porcentagem do periodo fundamental que forma o periodo do pulso glotico
@@ -38,21 +38,27 @@ def pulso_glotico(porcentagem_glotal, k):
     :return: list
     """
     pulso = []
-    tempo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0))
+    f0_variado = ctes.ParametrosConstantes.F0 * rnd.uniform(1.0-ctes.Gerais.VARIACAO_F0, 1.0+ctes.Gerais.VARIACAO_F0)
+    tempo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * f0_variado))
     wg = ctes.ParametrosConstantes.F0 * 2.0 * np.pi / porcentagem_glotal
     t_subida = int(np.pi * ctes.Amostragem.TAXA_AMOSTRAGEM / wg)
     t_descida = int(((1.0/wg) * np.arccos((k - 1.0) / k)) * ctes.Amostragem.TAXA_AMOSTRAGEM)
     t_vazio = int(tempo_discreto - t_subida - t_descida)
+
     for i in range(t_subida):
         u = 0.5 * (1.0 - np.cos(wg * i / ctes.Amostragem.TAXA_AMOSTRAGEM))
         pulso.append(u)
     for i in range(t_descida):
         u = (k * np.cos(wg * i / ctes.Amostragem.TAXA_AMOSTRAGEM) - k + 1.0)
         pulso.append(u)
-    ruido = ruido_gaussiano(t_vazio)
+
+    pulso = utils.modular_escalar(pulso, ganho_pulso)
+    ruido = utils.modular_escalar(ruido_gaussiano(t_vazio), ganho_ruido)
     for i in range(t_vazio):
         pulso.append(ruido[i])
+
     return pulso
+
 
 def ruido_branco():
     noise = []
