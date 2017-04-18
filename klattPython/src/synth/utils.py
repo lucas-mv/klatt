@@ -1,6 +1,6 @@
 from scipy import signal
 import matplotlib.pyplot as plt
-import src.synth.constantes as ctes
+import synth.constantes as ctes
 import numpy as np
 
 

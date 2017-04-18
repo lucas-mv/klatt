@@ -104,13 +104,13 @@ def ruido_rosa():
     return df.sum(axis=1).values
 
 
-def modulantesenoidal():
+def modulantesenoidal(amostras):
     mod = []
-    transicao = int(ctes.Gerais.PORCENTAGEM_MODULACAO_SENOIDAL * ctes.Amostragem.TOTAL_AMOSTRAS / 2)
+    transicao = int(ctes.Gerais.PORCENTAGEM_MODULACAO_SENOIDAL * amostras / 2)
     for i in range(transicao):
         angulo = (np.pi/2.0)*i/transicao
         mod.append(np.sin(angulo))
-    for i in range(int(ctes.Amostragem.TOTAL_AMOSTRAS-2*transicao)):
+    for i in range(int(amostras-2*transicao)):
         mod.append(1.0)
     for i in range(transicao):
         angulo = (np.pi / 2.0) * i / transicao

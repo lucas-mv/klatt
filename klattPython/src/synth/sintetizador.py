@@ -35,7 +35,7 @@ def sintetizar(nome_arquivo, vogal):
     utils.plotar(som.valores, 'PULSOS FILTRO RADIACAO', 'AMOSTRAS', 'INTENSIDADE')
 
     som.normalizar()
-    som.modular(fontes.modulantesenoidal())
+    som.modular(fontes.modulantesenoidal(len(som.valores)))
 
     som.salvararquivo()
     return som

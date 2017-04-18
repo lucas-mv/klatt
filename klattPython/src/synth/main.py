@@ -8,8 +8,8 @@ import synth.fontes as fontes
 
 
 def main():
-    utils.plotar(fontes.trem_pulsos_gloticos(0.8, 1.0))
-    som = sintetizador.sintetizar('audios/f0=220-modSin-noise', 'a')
+    utils.plotar(fontes.trem_pulsos_gloticos(0.8, 1.0, 1.0, 0.5))
+    som = sintetizador.sintetizar('audios/f0=150-modSin-noise', 'a')
     utils.plotar_formaonda(som)
     utils.mostrar_plots()
 
