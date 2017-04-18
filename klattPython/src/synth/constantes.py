@@ -10,6 +10,7 @@ class Gerais:
     DESVIO_PADRAO_RUIDO = 0.1
     CENTRO_RUIDO = 0.0
     VARIACAO_F0 = 0.05
+    VARIACAO_K = 0.5
 
 
 class Amostragem:

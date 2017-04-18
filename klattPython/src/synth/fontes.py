@@ -19,6 +19,7 @@ def trem_impulsos():
         imp[i] = 1.0
     return imp
 
+
 def trem_pulsos_gloticos(porcentagem_glotal, k, ganho_pulso, ganho_ruido):
     pulsos = []
     periodo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0))
@@ -30,17 +31,19 @@ def trem_pulsos_gloticos(porcentagem_glotal, k, ganho_pulso, ganho_ruido):
     return pulsos
 
 
-def pulso_glotico(porcentagem_glotal, k, ganho_pulso, ganho_ruido):
+def pulso_glotico(porcentagem_glotal, k_original, ganho_pulso, ganho_ruido):
     """
     Implementado segundo FANT, 1979, Vocal source analysis - a progress report
     :param porcentagem_glotal: porcentagem do periodo fundamental que forma o periodo do pulso glotico
-    :param k: parametro do metodo descrito, nos da a queda do pulso
+    :param k_original: parametro do metodo descrito, nos da a queda do pulso. será variado neste modulo
     :param ganho_pulso: controle de ganho do pulso
     :param ganho_ruido: controle de ganho do ruido
     :return: list
     """
     pulso = []
     f0_variado = ctes.ParametrosConstantes.F0 * rnd.uniform(1.0-ctes.Gerais.VARIACAO_F0, 1.0+ctes.Gerais.VARIACAO_F0)
+    k = k_original * rnd.uniform(1.0-ctes.Gerais.VARIACAO_K, 1.0+ctes.Gerais.VARIACAO_K)
+
     tempo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * f0_variado))
     wg = ctes.ParametrosConstantes.F0 * 2.0 * np.pi / porcentagem_glotal
     t_subida = int(np.pi * ctes.Amostragem.TAXA_AMOSTRAGEM / wg)
