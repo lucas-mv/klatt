@@ -56,9 +56,12 @@ def pulso_glotico(porcentagem_glotal, k_original, ganho_pulso, ganho_ruido):
     for i in range(t_descida):
         u = (k * np.cos(wg * i / ctes.Amostragem.TAXA_AMOSTRAGEM) - k + 1.0)
         pulso.append(u)
-
     pulso = utils.modular_escalar(pulso, ganho_pulso)
-    ruido = utils.modular_escalar(ruido_gaussiano(t_vazio), ganho_ruido)
+
+    ganho_ruido_k = 1
+    if k > 1:
+        ganho_ruido_k = 1/k
+    ruido = utils.modular_escalar(ruido_gaussiano(t_vazio), ganho_ruido * ganho_ruido_k)
     for i in range(t_vazio):
         pulso.append(ruido[i])
 

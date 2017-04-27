@@ -16,7 +16,7 @@ class ParametrosCascata:
     _avs = 0
     _fnz = 250
     _f0 = 80
-    _f1 = 450
+    _f1 = ctes.ParametrosConstantes.F0
     _f2 = 1450
     _f3 = 2450
     _f4 = 3300
@@ -138,6 +138,5 @@ class ParametrosCascata:
             self._f1 = parametros.F1
             self._f2 = parametros.F2
             self._f3 = parametros.F3
-        self._f0 = ctes.ParametrosConstantes.F0
         self._av = av
         self._avs = avs
