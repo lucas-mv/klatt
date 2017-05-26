@@ -11,6 +11,7 @@ class Gerais:
     CENTRO_RUIDO = 0.0
     VARIACAO_F0 = 0.05
     VARIACAO_K = 0.5
+    GANHO_RUIDO = 0.5
 
 
 class Amostragem:

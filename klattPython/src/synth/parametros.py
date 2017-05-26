@@ -5,15 +5,38 @@ Os ganhos descritos estão em dB e as frequencias em Hz.
 
 import synth.constantes as ctes
 
+def setar_ganho_ruido(ganhoRuido):
+    ctes.Gerais.GANHO_RUIDO = ganhoRuido
+
+
+def setar_variacao_f0(varF0):
+    ctes.Gerais.VARIACAO_F0 = varF0
+
+
+def setar_variacao_k(varK):
+    ctes.Gerais.VARIACAO_K = varK
+
+
+def setar_f0(f0):
+    ctes.ParametrosConstantes.F0 = f0
+
+
+def zerar_variacao_f0():
+    ctes.Gerais.VARIACAO_F0 = 0
+
+
+def zerar_variacao_k():
+    ctes.Gerais.VARIACAO_K = 0
+
 
 class ParametrosCascata:
-
     # <editor-fold desc="Propriedades">
 
     _av = 0
     _af = 0
     _ah = 0
     _avs = 0
+
     _fnz = 250
     _f0 = 80
     _f1 = ctes.ParametrosConstantes.F0
@@ -30,7 +53,6 @@ class ParametrosCascata:
     _b1 = 50
     _b2 = 70
     _b3 = 110
-
     @property
     def av(self):
         return self._av

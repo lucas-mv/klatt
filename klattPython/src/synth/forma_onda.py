@@ -16,7 +16,7 @@ class Som:
 
     def __init__(self, arquivo):
         self._arquivo = arquivo
-        self._valores = fontes.trem_pulsos_gloticos(0.8, 1.0, 1.0, 0.5)
+        self._valores = fontes.trem_pulsos_gloticos(0.8, 1.0, 1.0, ctes.Gerais.GANHO_RUIDO)
 
     @property
     def valores(self):
