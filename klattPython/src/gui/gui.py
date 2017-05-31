@@ -234,20 +234,6 @@ class Gui:
         self.bnz["font"] = self.fontePadrao
         self.bnz.pack(side=LEFT)
 
-        # self.fgsLabel = Label(self.fgsContainer, text="FGS", font=self.fontePadrao)
-        # self.fgsLabel.pack(side=LEFT)
-        # self.fgs = Entry(self.fgsContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.FGS)))
-        # self.fgs["width"] = 30
-        # self.fgs["font"] = self.fontePadrao
-        # self.fgs.pack(side=LEFT)
-        #
-        # self.bgsLabel = Label(self.bgsContainer, text="BGS", font=self.fontePadrao)
-        # self.bgsLabel.pack(side=LEFT)
-        # self.bgs = Entry(self.bgsContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.BGS)))
-        # self.bgs["width"] = 30
-        # self.bgs["font"] = self.fontePadrao
-        # self.bgs.pack(side=LEFT)
-
         self.f0Label = Label(self.f0Container, text="F0", font=self.fontePadrao)
         self.f0Label.pack(side=LEFT)
         self.f0 = Entry(self.f0Container, textvariable= StringVar(root, value=str(ctes.ParametrosConstantes.F0)))
