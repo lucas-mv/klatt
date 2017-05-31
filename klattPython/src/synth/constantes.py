@@ -36,7 +36,7 @@ class ParametrosConstantes:
     BNZ = 100
     FGS = 0
     BGS = 200
-    F0 = 220
+    F0 = 150
 
 
 class VogalA:
