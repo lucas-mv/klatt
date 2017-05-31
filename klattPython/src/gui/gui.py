@@ -31,6 +31,18 @@ class Gui:
         self.ganhoRuidoContainer["padx"] = 20
         self.ganhoRuidoContainer.pack()
 
+        self.ganhoPulsoContainer = Frame(master)
+        self.ganhoPulsoContainer["padx"] = 20
+        self.ganhoPulsoContainer.pack()
+
+        self.kContainer = Frame(master)
+        self.kContainer["padx"] = 20
+        self.kContainer.pack()
+
+        self.porcentGlotContainer = Frame(master)
+        self.porcentGlotContainer["padx"] = 20
+        self.porcentGlotContainer.pack()
+
         self.anContainer = Frame(master)
         self.anContainer["padx"] = 20
         self.anContainer.pack()
@@ -41,27 +53,27 @@ class Gui:
 
         self.b4Container = Frame(master)
         self.b4Container["padx"] = 20
-        self.anContainer.pack()
+        self.b4Container.pack()
 
         self.b5Container = Frame(master)
         self.b5Container["padx"] = 20
         self.b5Container.pack()
 
-        self.fgpContainer = Frame(master)
-        self.fgpContainer["padx"] = 20
-        self.fgpContainer.pack()
+        # self.fgpContainer = Frame(master)
+        # self.fgpContainer["padx"] = 20
+        # self.fgpContainer.pack()
+        #
+        # self.bgpContainer = Frame(master)
+        # self.bgpContainer["padx"] = 20
+        # self.bgpContainer.pack()
 
-        self.bgpContainer = Frame(master)
-        self.bgpContainer["padx"] = 20
-        self.bgpContainer.pack()
-
-        self.fgzContainer = Frame(master)
-        self.fgzContainer["padx"] = 20
-        self.fgzContainer.pack()
-
-        self.bgzContainer = Frame(master)
-        self.bgzContainer["padx"] = 20
-        self.bgzContainer.pack()
+        # self.fgzContainer = Frame(master)
+        # self.fgzContainer["padx"] = 20
+        # self.fgzContainer.pack()
+        #
+        # self.bgzContainer = Frame(master)
+        # self.bgzContainer["padx"] = 20
+        # self.bgzContainer.pack()
 
         self.fnpContainer = Frame(master)
         self.fnpContainer["padx"] = 20
@@ -74,14 +86,6 @@ class Gui:
         self.bnzContainer = Frame(master)
         self.bnzContainer["padx"] = 20
         self.bnzContainer.pack()
-
-        self.fgsContainer = Frame(master)
-        self.fgsContainer["padx"] = 20
-        self.fgsContainer.pack()
-
-        self.bgsContainer = Frame(master)
-        self.bgsContainer["padx"] = 20
-        self.bgsContainer.pack()
 
         self.f0Container = Frame(master)
         self.f0Container["padx"] = 20
@@ -202,40 +206,12 @@ class Gui:
         self.f2["font"] = self.fontePadrao
         self.f2.pack(side=LEFT)
 
-        self.b5Label = Label(self.b5Container, text="B4", font=self.fontePadrao)
+        self.b5Label = Label(self.b5Container, text="B5", font=self.fontePadrao)
         self.b5Label.pack(side=LEFT)
         self.b5 = Entry(self.b5Container, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B5)))
         self.b5["width"] = 30
         self.b5["font"] = self.fontePadrao
         self.b5.pack(side=LEFT)
-
-        self.fgpLabel = Label(self.fgpContainer, text="B4", font=self.fontePadrao)
-        self.fgpLabel.pack(side=LEFT)
-        self.fgp = Entry(self.fgpContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B5)))
-        self.fgp["width"] = 30
-        self.fgp["font"] = self.fontePadrao
-        self.fgp.pack(side=LEFT)
-
-        self.bgpLabel = Label(self.bgpContainer, text="B4", font=self.fontePadrao)
-        self.bgpLabel.pack(side=LEFT)
-        self.bgp = Entry(self.bgpContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B5)))
-        self.bgp["width"] = 30
-        self.bgp["font"] = self.fontePadrao
-        self.bgp.pack(side=LEFT)
-
-        self.fgzLabel = Label(self.fgzContainer, text="B4", font=self.fontePadrao)
-        self.fgzLabel.pack(side=LEFT)
-        self.fgz = Entry(self.fgzContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B5)))
-        self.fgz["width"] = 30
-        self.fgz["font"] = self.fontePadrao
-        self.fgz.pack(side=LEFT)
-
-        self.bgzLabel = Label(self.bgzContainer, text="B4", font=self.fontePadrao)
-        self.bgzLabel.pack(side=LEFT)
-        self.bgz = Entry(self.bgzContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B5)))
-        self.bgz["width"] = 30
-        self.bgz["font"] = self.fontePadrao
-        self.bgz.pack(side=LEFT)
 
         self.fnpLabel = Label(self.fnpContainer, text="FNP", font=self.fontePadrao)
         self.fnpLabel.pack(side=LEFT)
@@ -258,19 +234,19 @@ class Gui:
         self.bnz["font"] = self.fontePadrao
         self.bnz.pack(side=LEFT)
 
-        self.fgsLabel = Label(self.fgsContainer, text="FGS", font=self.fontePadrao)
-        self.fgsLabel.pack(side=LEFT)
-        self.fgs = Entry(self.fgsContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.FGS)))
-        self.fgs["width"] = 30
-        self.fgs["font"] = self.fontePadrao
-        self.fgs.pack(side=LEFT)
-
-        self.bgsLabel = Label(self.bgsContainer, text="BGS", font=self.fontePadrao)
-        self.bgsLabel.pack(side=LEFT)
-        self.bgs = Entry(self.bgsContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.BGS)))
-        self.bgs["width"] = 30
-        self.bgs["font"] = self.fontePadrao
-        self.bgs.pack(side=LEFT)
+        # self.fgsLabel = Label(self.fgsContainer, text="FGS", font=self.fontePadrao)
+        # self.fgsLabel.pack(side=LEFT)
+        # self.fgs = Entry(self.fgsContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.FGS)))
+        # self.fgs["width"] = 30
+        # self.fgs["font"] = self.fontePadrao
+        # self.fgs.pack(side=LEFT)
+        #
+        # self.bgsLabel = Label(self.bgsContainer, text="BGS", font=self.fontePadrao)
+        # self.bgsLabel.pack(side=LEFT)
+        # self.bgs = Entry(self.bgsContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.BGS)))
+        # self.bgs["width"] = 30
+        # self.bgs["font"] = self.fontePadrao
+        # self.bgs.pack(side=LEFT)
 
         self.f0Label = Label(self.f0Container, text="F0", font=self.fontePadrao)
         self.f0Label.pack(side=LEFT)
@@ -300,6 +276,27 @@ class Gui:
         self.b3["font"] = self.fontePadrao
         self.b3.pack(side=LEFT)
 
+        self.kLabel = Label(self.kContainer, text="k", font=self.fontePadrao)
+        self.kLabel.pack(side=LEFT)
+        self.k = Entry(self.kContainer, textvariable=StringVar(root, value=str(ctes.Gerais.K)))
+        self.k["width"] = 30
+        self.k["font"] = self.fontePadrao
+        self.k.pack(side=LEFT)
+
+        self.percentGlotLabel = Label(self.porcentGlotContainer, text="Relaçao FG/F0", font=self.fontePadrao)
+        self.percentGlotLabel.pack(side=LEFT)
+        self.percentGlot = Entry(self.porcentGlotContainer, textvariable=StringVar(root, value=str(ctes.Gerais.PORCENTAGEM_GLOTAL)))
+        self.percentGlot["width"] = 30
+        self.percentGlot["font"] = self.fontePadrao
+        self.percentGlot.pack(side=LEFT)
+
+        self.ganhoPulsoLabel = Label(self.ganhoPulsoContainer, text="Ganho do pulso (1 sendo o máximo)", font=self.fontePadrao)
+        self.ganhoPulsoLabel.pack(side=LEFT)
+        self.ganhoPulso = Entry(self.ganhoPulsoContainer, textvariable=StringVar(root, value=str(ctes.Gerais.K)))
+        self.ganhoPulso["width"] = 30
+        self.ganhoPulso["font"] = self.fontePadrao
+        self.ganhoPulso.pack(side=LEFT)
+
         self.autenticar = Button(self.sintetizarContainer)
         self.autenticar["text"] = "Sintetizar"
         self.autenticar["font"] = ("Calibri", "8")
@@ -319,6 +316,9 @@ class Gui:
                 ctes.Gerais.VARIACAO_F0 = float(self.variacaoF0.get())
                 ctes.Gerais.VARIACAO_K = float(self.variacaoK.get())
                 ctes.Gerais.GANHO_RUIDO = float(self.ganhoRuido.get())
+                ctes.Gerais.K = float(self.k.get())
+                ctes.Gerais.GANHO_PULSO = float(self.ganhoPulso.get())
+                ctes.Gerais.PORCENTAGEM_GLOTAL = float(self.percentGlot.get())
                 ctes.ParametrosConstantes.F0 = float(self.f0.get())
                 ctes.ParametrosConstantes.B4 = float(self.b4.get())
                 ctes.ParametrosConstantes.B5 = float(self.b5.get())

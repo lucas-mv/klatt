@@ -20,12 +20,13 @@ def trem_impulsos():
     return imp
 
 
-def trem_pulsos_gloticos(porcentagem_glotal, k, ganho_pulso, ganho_ruido):
+def trem_pulsos_gloticos():
     pulsos = []
     periodo_discreto = int(1.0 / (ctes.Amostragem.TEMPO_AMOSTRAGEM * ctes.ParametrosConstantes.F0))
     num_pulsos = int(ctes.Amostragem.TOTAL_AMOSTRAS/periodo_discreto)
     for pulso in range(num_pulsos):
-        pulso_glot = pulso_glotico(porcentagem_glotal, k, ganho_pulso, ganho_ruido)
+        pulso_glot = pulso_glotico(ctes.Gerais.PORCENTAGEM_GLOTAL, ctes.Gerais.K, ctes.Gerais.GANHO_PULSO,
+                                   ctes.Gerais.GANHO_RUIDO)
         for amostra in range(len(pulso_glot)):
             pulsos.append(pulso_glot[amostra])
     return pulsos

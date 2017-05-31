@@ -12,6 +12,9 @@ class Gerais:
     VARIACAO_F0 = 0.05
     VARIACAO_K = 0.5
     GANHO_RUIDO = 0.5
+    PORCENTAGEM_GLOTAL = 0.8
+    GANHO_PULSO = 1.0
+    K = 1.0
 
 
 class Amostragem:
