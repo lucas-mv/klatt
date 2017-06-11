@@ -59,22 +59,6 @@ class Gui:
         self.b5Container["padx"] = 20
         self.b5Container.pack()
 
-        # self.fgpContainer = Frame(master)
-        # self.fgpContainer["padx"] = 20
-        # self.fgpContainer.pack()
-        #
-        # self.bgpContainer = Frame(master)
-        # self.bgpContainer["padx"] = 20
-        # self.bgpContainer.pack()
-
-        # self.fgzContainer = Frame(master)
-        # self.fgzContainer["padx"] = 20
-        # self.fgzContainer.pack()
-        #
-        # self.bgzContainer = Frame(master)
-        # self.bgzContainer["padx"] = 20
-        # self.bgzContainer.pack()
-
         self.fnpContainer = Frame(master)
         self.fnpContainer["padx"] = 20
         self.fnpContainer.pack()
@@ -130,7 +114,7 @@ class Gui:
         self.nomeArquivo["font"] = self.fontePadrao
         self.nomeArquivo.pack(side=LEFT)
 
-        self.tempoSimulacaoLabel = Label(self.tempoSimulacaoContainer, text="Tempo de simulação (s)", font=self.fontePadrao)
+        self.tempoSimulacaoLabel = Label(self.tempoSimulacaoContainer, text="Tempo de simulação [s]", font=self.fontePadrao)
         self.tempoSimulacaoLabel.pack(side=LEFT)
         self.tempoSimulacao = Entry(self.tempoSimulacaoContainer, textvariable=StringVar(root, value=str(ctes.Gerais.TEMPO_SIMULACAO)))
         self.tempoSimulacao["width"] = 30
@@ -164,98 +148,98 @@ class Gui:
         self.ganhoRuido["font"] = self.fontePadrao
         self.ganhoRuido.pack(side=LEFT)
 
-        self.anLabel = Label(self.anContainer, text="AN", font=self.fontePadrao)
+        self.anLabel = Label(self.anContainer, text="AN [dB]", font=self.fontePadrao)
         self.anLabel.pack(side=LEFT)
         self.an = Entry(self.anContainer, textvariable= StringVar(root, value=str(ctes.ParametrosConstantes.AN)))
         self.an["width"] = 30
         self.an["font"] = self.fontePadrao
         self.an.pack(side=LEFT)
 
-        self.f1Label = Label(self.f1Container, text="F1", font=self.fontePadrao)
+        self.f1Label = Label(self.f1Container, text="F1 [Hz]", font=self.fontePadrao)
         self.f1Label.pack(side=LEFT)
         self.f1 = Entry(self.f1Container, textvariable=StringVar(root, value=str(ctes.VogalA.F1)))
         self.f1["width"] = 30
         self.f1["font"] = self.fontePadrao
         self.f1.pack(side=LEFT)
 
-        self.a1Label = Label(self.a1Container, text="A1", font=self.fontePadrao)
+        self.a1Label = Label(self.a1Container, text="A1 [dB]", font=self.fontePadrao)
         self.a1Label.pack(side=LEFT)
         self.a1 = Entry(self.a1Container, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.A1)))
         self.a1["width"] = 30
         self.a1["font"] = self.fontePadrao
         self.a1.pack(side=LEFT)
 
-        self.b1Label = Label(self.b1Container, text="B1", font=self.fontePadrao)
+        self.b1Label = Label(self.b1Container, text="B1 [Hz]", font=self.fontePadrao)
         self.b1Label.pack(side=LEFT)
         self.b1 = Entry(self.b1Container, textvariable=StringVar(root, value=str(ctes.VogalA.B1)))
         self.b1["width"] = 30
         self.b1["font"] = self.fontePadrao
         self.b1.pack(side=LEFT)
 
-        self.b4Label = Label(self.b4Container, text="B4", font=self.fontePadrao)
+        self.b4Label = Label(self.b4Container, text="B4 [Hz]", font=self.fontePadrao)
         self.b4Label.pack(side=LEFT)
         self.b4 = Entry(self.b4Container, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B4)))
         self.b4["width"] = 30
         self.b4["font"] = self.fontePadrao
         self.b4.pack(side=LEFT)
 
-        self.f2Label = Label(self.f2Container, text="F2", font=self.fontePadrao)
+        self.f2Label = Label(self.f2Container, text="F2 [Hz]", font=self.fontePadrao)
         self.f2Label.pack(side=LEFT)
         self.f2 = Entry(self.f2Container, textvariable=StringVar(root, value=str(ctes.VogalA.F2)))
         self.f2["width"] = 30
         self.f2["font"] = self.fontePadrao
         self.f2.pack(side=LEFT)
 
-        self.b5Label = Label(self.b5Container, text="B5", font=self.fontePadrao)
+        self.b5Label = Label(self.b5Container, text="B5 [Hz]", font=self.fontePadrao)
         self.b5Label.pack(side=LEFT)
         self.b5 = Entry(self.b5Container, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.B5)))
         self.b5["width"] = 30
         self.b5["font"] = self.fontePadrao
         self.b5.pack(side=LEFT)
 
-        self.fnpLabel = Label(self.fnpContainer, text="FNP", font=self.fontePadrao)
+        self.fnpLabel = Label(self.fnpContainer, text="FNP [Hz]", font=self.fontePadrao)
         self.fnpLabel.pack(side=LEFT)
         self.fnp = Entry(self.fnpContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.FNP)))
         self.fnp["width"] = 30
         self.fnp["font"] = self.fontePadrao
         self.fnp.pack(side=LEFT)
 
-        self.bnpLabel = Label(self.bnpContainer, text="BNP", font=self.fontePadrao)
+        self.bnpLabel = Label(self.bnpContainer, text="BNP [Hz]", font=self.fontePadrao)
         self.bnpLabel.pack(side=LEFT)
         self.bnp = Entry(self.bnpContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.FNP)))
         self.bnp["width"] = 30
         self.bnp["font"] = self.fontePadrao
         self.bnp.pack(side=LEFT)
 
-        self.bnzLabel = Label(self.bnzContainer, text="BNZ", font=self.fontePadrao)
+        self.bnzLabel = Label(self.bnzContainer, text="BNZ [Hz]", font=self.fontePadrao)
         self.bnzLabel.pack(side=LEFT)
         self.bnz = Entry(self.bnzContainer, textvariable=StringVar(root, value=str(ctes.ParametrosConstantes.BNZ)))
         self.bnz["width"] = 30
         self.bnz["font"] = self.fontePadrao
         self.bnz.pack(side=LEFT)
 
-        self.f0Label = Label(self.f0Container, text="F0", font=self.fontePadrao)
+        self.f0Label = Label(self.f0Container, text="F0 [Hz]", font=self.fontePadrao)
         self.f0Label.pack(side=LEFT)
         self.f0 = Entry(self.f0Container, textvariable= StringVar(root, value=str(ctes.ParametrosConstantes.F0)))
         self.f0["width"] = 30
         self.f0["font"] = self.fontePadrao
         self.f0.pack(side=LEFT)
 
-        self.b2Label = Label(self.b2Container, text="B2", font=self.fontePadrao)
+        self.b2Label = Label(self.b2Container, text="B2 [Hz]", font=self.fontePadrao)
         self.b2Label.pack(side=LEFT)
         self.b2 = Entry(self.b2Container, textvariable=StringVar(root, value=str(ctes.VogalA.B2)))
         self.b2["width"] = 30
         self.b2["font"] = self.fontePadrao
         self.b2.pack(side=LEFT)
 
-        self.f3Label = Label(self.f3Container, text="F3", font=self.fontePadrao)
+        self.f3Label = Label(self.f3Container, text="F3 [Hz]", font=self.fontePadrao)
         self.f3Label.pack(side=LEFT)
         self.f3 = Entry(self.f3Container, textvariable=StringVar(root, value=str(ctes.VogalA.F3)))
         self.f3["width"] = 30
         self.f3["font"] = self.fontePadrao
         self.f3.pack(side=LEFT)
 
-        self.b3Label = Label(self.b3Container, text="B3", font=self.fontePadrao)
+        self.b3Label = Label(self.b3Container, text="B3 [Hz]", font=self.fontePadrao)
         self.b3Label.pack(side=LEFT)
         self.b3 = Entry(self.b3Container, textvariable=StringVar(root, value=str(ctes.VogalA.B3)))
         self.b3["width"] = 30
