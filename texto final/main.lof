@@ -1,0 +1,22 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Diagrama de funcionamento do VODER. Fonte: \citeonline {hartmut_traunmuller_history}.}}{23}{figure.2.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Pessoa operando o VODER na \textit {World Fair} de Nova York em 1939. Fonte: \citeonline {hartmut_traunmuller_history}.}}{24}{figure.2.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama do circuito anal\IeC {\'o}gico para gerar os filtros ressoadores de formantes controlados por tens\IeC {\~a}o do OVE II. Fonte: \citeonline {fant_g._speech}.}}{24}{figure.2.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama geral do OVE III. Fonte: \citeonline {liljencrants_j._ove}.}}{25}{figure.2.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama esquem\IeC {\'a}tico do trato vocal. Fonte: \citeonline {maurilio_1999}.}}{27}{figure.3.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama de como a glote manipula o fluxo de ar para gerar os pulsos necess\IeC {\'a}rios para a vocaliza\IeC {\c c}\IeC {\~a}o. Fonte: \citeonline {maurilio_2004}.}}{28}{figure.3.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Diagrama esquem\IeC {\'a}tico b\IeC {\'a}sico do modelo fonte-filtro da produ\IeC {\c c}\IeC {\~a}o da voz. Fonte: \citeonline {maurilio_1999}.}}{28}{figure.3.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de blocos do sintetizador de formantes. Fonte: \citeonline {klatt1980}.}}{29}{figure.3.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Forma de onda obtida usando a metodologia de \citeonline {klatt1980} para o pulso glotal. Fonte: \citeonline {klatt1980}.}}{29}{figure.3.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Modelo de gera\IeC {\c c}\IeC {\~a}o dos pulsos gl\IeC {\'o}ticos. Fonte: \citeonline {fant_g._1979}.}}{30}{figure.3.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Resposta em frequ\IeC {\^e}ncia de um filtro digital ressonante de formantes. Fonte: \citeonline {klatt1980}.}}{31}{figure.3.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de blocos de um filtro digital ressonante. Fonte: \citeonline {klatt1980}.}}{32}{figure.3.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces UML do relacionamento das classes do sintetizador desenvolvido, criada com a ferramenta online Gliffy \cite {gliffy}.}}{36}{figure.4.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Pulsos gerados com o algoritmo descrito em \citeonline {fant_g._1979}. Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{41}{figure.5.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Pulsos gerados com adi\IeC {\c c}\IeC {\~a}o dos ru\IeC {\'\i }dos. Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{42}{figure.5.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Pulsos com ru\IeC {\'\i }do adicionado e com varia\IeC {\c c}\IeC {\~o}es sutis na frequ\IeC {\^e}ncia fundamental (F0) e na velociadade de descida (k). Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{42}{figure.5.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de Bode do filtro que simula o comportamento nasal desenvolvido. Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{43}{figure.5.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Diagrama de Bode do filtro de formantes desenvolvido, onde os formantes 1, 2, 3, 4 e 5 j\IeC {\'a} est\IeC {\~a}o em cascata. Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{44}{figure.5.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagrama de Bode do filtro de radia\IeC {\c c}\IeC {\~a}o desenvolvido. Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{44}{figure.5.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Parte da onda sonora final gerada pelo sintetizador. Imagem gerada com o m\IeC {\'o}dulo Matplotlib, da biblioteca SciPy \cite {scipy}.}}{45}{figure.5.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Interface gr\IeC {\'a}fica b\IeC {\'a}sica desenvolvida para o sistema, permite que o usu\IeC {\'a}rio altere alguns par\IeC {\^a}metros antes de sintetizar a voz.}}{46}{figure.5.21}

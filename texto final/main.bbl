@@ -1,0 +1,124 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[developers 2017]{scipy}
+\abntrefinfo{developers}{DEVELOPERS}{2017}
+{DEVELOPERS, S.
+Biblioteca open souce para {Python}, \emph{{SciPy}.org}. 2017.
+Dispon{\'\i}vel em: \url{https://www.scipy.org/index.html}. Acesso em: 1 jul.
+  2017.}
+
+\bibitem[Fant 1979]{fant_g._1979}
+\abntrefinfo{Fant}{FANT}{1979}
+{FANT, G. Vocal source analysis-a progress report.
+\emph{STL-QPSR}, v.~20, n.~3-4, p. 31--53, 1979.}
+
+\bibitem[Fant e Martony 1962]{fant_g._speech}
+\abntrefinfo{Fant e Martony}{FANT; MARTONY}{1962}
+{FANT, G.; MARTONY, J. Instrumentation for parametric synthesis (ove-ii).
+\emph{KTH Speech Transmission Laboratory: Quarterly Progress and Status Report,
+  2}, v.~3, p. 18--19, 1962.}
+
+\bibitem[GitHub 2017]{github}
+\abntrefinfo{GitHub}{GITHUB}{2017}
+{GITHUB.
+Gerenciador de repositórios de código {GitHub}, \emph{{GitHub}}. 2017.
+Dispon{\'\i}vel em: \url{https://github.com}. Acesso em: 1 jul. 2017.}
+
+\bibitem[Gliffy 2017]{gliffy}
+\abntrefinfo{Gliffy}{GLIFFY}{2017}
+{GLIFFY.
+Ferramenta online para desenvolvimento de diagramas, \emph{Gliffy}. 2017.
+Dispon{\'\i}vel em: \url{https://www.gliffy.com}. Acesso em: 1 jul. 2017.}
+
+\bibitem[Gold e Rabiner 1968]{gold1968analysis}
+\abntrefinfo{Gold e Rabiner}{GOLD; RABINER}{1968}
+{GOLD, B.; RABINER, L. Analysis of digital and analog formant synthesizers.
+\emph{IEEE Transactions on Audio and Electroacoustics}, IEEE, v.~16, n.~1, p.
+  81--94, 1968.}
+
+\bibitem[Hunt e Black 1996]{hunt1996unit}
+\abntrefinfo{Hunt e Black}{HUNT; BLACK}{1996}
+{HUNT, A.~J.; BLACK, A.~W. Unit selection in a concatenative speech synthesis
+  system using a large speech database. In:  IEEE. \emph{Acoustics, Speech, and
+  Signal Processing, 1996. ICASSP-96. Conference Proceedings., 1996 IEEE
+  International Conference on}. [S.l.], 1996. v.~1, p. 373--376.}
+
+\bibitem[JetBrains 2017]{pycharm}
+\abntrefinfo{JetBrains}{JETBRAINS}{2017}
+{JETBRAINS.
+Página da {IDE} para desenvolvimento de {Python} {Pycharm}, \emph{{PyCharm}}.
+  2017.
+Dispon{\'\i}vel em: \url{https://www.jetbrains.com/pycharm/}. Acesso em: 1 jul.
+  2017.}
+
+\bibitem[Klatt 1980]{klatt1980}
+\abntrefinfo{Klatt}{KLATT}{1980}
+{KLATT, D.~H. Software for a cascade/parallel formant synthesizer.
+\emph{the Journal of the Acoustical Society of America}, ASA, v.~67, n.~3, p.
+  971--995, 1980.}
+
+\bibitem[Liljencrants 1968]{liljencrants_j._ove}
+\abntrefinfo{Liljencrants}{LILJENCRANTS}{1968}
+{LILJENCRANTS, J. The ove iii speech synthesizer.
+\emph{IEEE Transactions on Audio and Electroacoustics}, IEEE, v.~16, n.~1, p.
+  137--140, 1968.}
+
+\bibitem[Lucero et al. 2014]{jorgelucero2014}
+\abntrefinfo{Lucero et al.}{LUCERO et al.}{2014}
+{LUCERO, J.~C. et al. A vocal fold model for disordered voice synthesis. In:
+  \emph{9th International Conference in Voice Physiology and Biomechanics}.
+  Salt Lake City: CNPq and F.R.S./F.N.R.S., 2014.  (ICVPB). Dispon{\'\i}vel em:
+  \url{http://www.cic.unb.br/~lucero/disorder.html}. Acesso em: 1 jul. 2017.}
+
+\bibitem[MathWorks 2017]{matlab}
+\abntrefinfo{MathWorks}{MATHWORKS}{2017}
+{MATHWORKS.
+Página do ambiente de computação matemática {MATLAB}, \emph{{MATLAB}}.
+  2017.
+Dispon{\'\i}vel em: \url{https://www.mathworks.com/products/matlab.html}.
+  Acesso em: 1 jul. 2017.}
+
+\bibitem[Stylianou e Syrdal 2001]{stylianou2001perceptual}
+\abntrefinfo{Stylianou e Syrdal}{STYLIANOU; SYRDAL}{2001}
+{STYLIANOU, Y.; SYRDAL, A.~K. Perceptual and objective detection of
+  discontinuities in concatenative speech synthesis. In:  IEEE.
+  \emph{Acoustics, Speech, and Signal Processing, 2001.
+  Proceedings.(ICASSP'01). 2001 IEEE International Conference on}. [S.l.],
+  2001. v.~2, p. 837--840.}
+
+\bibitem[Tarn{\'o}czy 1949]{tarnoczy1949speaking}
+\abntrefinfo{Tarn{\'o}czy}{TARN{\'O}CZY}{1949}
+{TARN{\'O}CZY, T. The speaking machine of wolfgang von kempelen.
+\emph{The Journal of the Acoustical Society of America}, Acoustical Society of
+  America, v.~21, n.~4, p. 461--461, 1949.}
+
+\bibitem[Traunm{\"u}ller 2005]{hartmut_traunmuller_history}
+\abntrefinfo{Traunm{\"u}ller}{TRAUNM{\"U}LLER}{2005}
+{TRAUNM{\"U}LLER, H. History of speech synthesis, 1770-1970.
+\emph{Web page http://www. ling. su. se/staff/hartmut/kemplne. htm. Last
+  checked}, p. 05--11, 2005.}
+
+\bibitem[Vieira 1999]{maurilio_1999}
+\abntrefinfo{Vieira}{VIEIRA}{1999}
+{VIEIRA, M.~N.
+Nota de aula, \emph{Sobre a {Anatomia}, {Fisiologia} e {Patologia} da
+  {Laringe}}. Departamento de Física - ICEx - UFMG: [s.n.], 1999.}
+
+\bibitem[Vieira 2004]{maurilio_2004}
+\abntrefinfo{Vieira}{VIEIRA}{2004}
+{VIEIRA, M.~N. Princípios da {Produção} e {Análise} de {Voz}. In:
+  \emph{Princípios da {Produção} e {Análise} de {Voz}}. Departamento de
+  Física/ICEx/UFMG: Departamento de Física/ICEx/UFMG, 2004. p. 1--11.}
+
+\bibitem[Vieira, Sansao e Yehia 2014]{vieira2014measurement}
+\abntrefinfo{Vieira, Sansao e Yehia}{VIEIRA; SANSAO; YEHIA}{2014}
+{VIEIRA, M.~N.; SANSAO, J. P.~H.; YEHIA, H.~C. Measurement of signal-to-noise
+  ratio in dysphonic voices by image processing of spectrograms.
+\emph{Speech Communication}, Elsevier, v.~61, p. 17--32, 2014.}
+
+\end{thebibliography}
